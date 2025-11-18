@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Ably from 'ably';
+import type { Types } from 'ably';
 
 /**
  * Token Endpoint API Route
@@ -44,7 +45,10 @@ export async function GET(request: NextRequest) {
     // - 'publish': Can send messages to the channel
     // - 'presence': Can see who's online (enter/leave presence)
     // - 'history': Can retrieve message history
-    const tokenParams: Ably.Types.TokenParams = {
+    //
+    // Note: We import Types directly from 'ably' instead of using Ably.Types
+    // because Ably is a default export, not a namespace with Types property.
+    const tokenParams: Types.TokenParams = {
       clientId: clientId, // Must match the clientId used in the client initialization
       capability: JSON.stringify({
         // Allow all operations on the chat:general channel
