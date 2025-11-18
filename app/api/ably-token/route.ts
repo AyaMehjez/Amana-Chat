@@ -34,12 +34,22 @@ export async function GET(request: NextRequest) {
     const ably = new Ably.Rest({ key: apiKey });
 
     // توليد توكن للعميل مع clientId المطابق
-    const tokenParams = {
-      clientId: clientId, // يجب أن يطابق clientId المستخدم في العميل
-      capability: {
-        // السماح بالاشتراك والإرسال في قناة chat:general
+    // 
+    // IMPORTANT: According to Ably's TokenParams type, the `capability` property
+    // must be a JSON string, not a plain object. We use JSON.stringify() to
+    // convert the capability object into a valid JSON string format.
+    //
+    // The capability object defines what permissions the client has:
+    // - 'subscribe': Can receive messages from the channel
+    // - 'publish': Can send messages to the channel
+    // - 'presence': Can see who's online (enter/leave presence)
+    // - 'history': Can retrieve message history
+    const tokenParams: Ably.Types.TokenParams = {
+      clientId: clientId, // Must match the clientId used in the client initialization
+      capability: JSON.stringify({
+        // Allow all operations on the chat:general channel
         'chat:general': ['subscribe', 'publish', 'presence', 'history'],
-      },
+      }),
     };
 
     const tokenRequest = await ably.auth.createTokenRequest(tokenParams);
