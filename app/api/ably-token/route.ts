@@ -45,10 +45,10 @@ export async function GET(request: NextRequest) {
     // - 'presence': Can see who's online (enter/leave presence)
     // - 'history': Can retrieve message history
     //
-    // Note: We use Parameters utility type to extract the correct type from
-    // createTokenRequest method, which ensures type safety without needing
-    // to import Types directly (which may not be available in all Ably versions).
-    const tokenParams: Parameters<typeof ably.auth.createTokenRequest>[0] = {
+    // Note: We don't use explicit type annotation here to avoid TypeScript import issues.
+    // TypeScript will infer the correct type from createTokenRequest method.
+    // This ensures compatibility across different Ably SDK versions.
+    const tokenParams = {
       clientId: clientId, // Must match the clientId used in the client initialization
       capability: JSON.stringify({
         // Allow all operations on the chat:general channel
