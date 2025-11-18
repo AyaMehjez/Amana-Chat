@@ -1,8 +1,6 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import type { Types } from 'ably';
-
 /**
  * Chat Component - Modern Real-time Chat Interface
  * 
@@ -40,8 +38,9 @@ export default function Chat() {
   
   // Refs
   const messagesEndRef = useRef<HTMLDivElement>(null);
-  const ablyClientRef = useRef<Types.RealtimePromise | null>(null);
-  const channelRef = useRef<Types.RealtimeChannelPromise | null>(null);
+  // Note: Using 'any' type to avoid TypeScript import issues with Ably Types
+  const ablyClientRef = useRef<any>(null);
+  const channelRef = useRef<any>(null);
 
   // Generate random username if not provided
   useEffect(() => {
@@ -94,7 +93,8 @@ export default function Chat() {
         });
 
         // Subscribe to messages
-        await channel.subscribe('message', (message: Types.Message) => {
+        // Note: Using 'any' type for message parameter to avoid TypeScript import issues
+        await channel.subscribe('message', (message: any) => {
           const newMessage: Message = {
             id: message.id || `${Date.now()}-${Math.random()}`,
             text: message.data.text,
@@ -114,7 +114,8 @@ export default function Chat() {
           data: m.data as { username?: string }
         })));
 
-        presence.subscribe('enter', (member: Types.PresenceMessage) => {
+        // Note: Using 'any' type for presence members to avoid TypeScript import issues
+        presence.subscribe('enter', (member: any) => {
           setPresenceMembers((prev) => {
             if (!prev.find(m => m.clientId === member.clientId)) {
               return [...prev, {
@@ -126,7 +127,7 @@ export default function Chat() {
           });
         });
 
-        presence.subscribe('leave', (member: Types.PresenceMessage) => {
+        presence.subscribe('leave', (member: any) => {
           setPresenceMembers((prev) => 
             prev.filter(m => m.clientId !== member.clientId)
           );
