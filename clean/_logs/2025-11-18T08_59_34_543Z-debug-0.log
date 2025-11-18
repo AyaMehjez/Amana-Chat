@@ -1,0 +1,1149 @@
+0 verbose cli C:\Program Files\nodejs\node.exe C:\Program Files\nodejs\node_modules\npm\bin\npm-cli.js
+1 info using npm@10.9.2
+2 info using node@v22.17.1
+3 silly config load:file:C:\Program Files\nodejs\node_modules\npm\npmrc
+4 silly config load:file:C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\.npmrc
+5 silly config load:file:C:\Users\WAFA\.npmrc
+6 silly config load:file:C:\Users\WAFA\AppData\Roaming\npm\etc\npmrc
+7 verbose title npm install
+8 verbose argv "install"
+9 verbose logfile logs-max:10 dir:C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\clean\_logs\2025-11-18T08_59_34_543Z-
+10 verbose logfile C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\clean\_logs\2025-11-18T08_59_34_543Z-debug-0.log
+11 silly logfile done cleaning log files
+12 silly packumentCache heap:2197815296 maxSize:549453824 maxEntrySize:274726912
+13 silly idealTree buildDeps
+14 silly fetch manifest ably@^2.5.2
+15 silly packumentCache full:https://registry.npmjs.org/ably cache-miss
+16 http fetch GET 200 https://registry.npmjs.org/ably 9199ms (cache revalidated)
+17 silly packumentCache full:https://registry.npmjs.org/ably set size:777103 disposed:false
+18 silly fetch manifest react@19.1.0
+19 silly packumentCache full:https://registry.npmjs.org/react cache-miss
+20 http fetch GET 200 https://registry.npmjs.org/react 435ms (cache revalidated)
+21 silly packumentCache full:https://registry.npmjs.org/react set size:6268071 disposed:false
+22 silly fetch manifest react-dom@19.1.0
+23 silly packumentCache full:https://registry.npmjs.org/react-dom cache-miss
+24 http fetch GET 200 https://registry.npmjs.org/react-dom 298ms (cache revalidated)
+25 silly packumentCache full:https://registry.npmjs.org/react-dom set size:8213011 disposed:false
+26 silly placeDep ROOT ably@2.14.0 OK for: nextjs@0.1.0 want: ^2.5.2
+27 silly fetch manifest @ably/msgpack-js@^0.4.0
+28 silly packumentCache full:https://registry.npmjs.org/@ably%2fmsgpack-js cache-miss
+29 silly fetch manifest dequal@^2.0.3
+30 silly packumentCache full:https://registry.npmjs.org/dequal cache-miss
+31 silly fetch manifest fastestsmallesttextencoderdecoder@^1.0.22
+32 silly packumentCache full:https://registry.npmjs.org/fastestsmallesttextencoderdecoder cache-miss
+33 silly fetch manifest got@^11.8.5
+34 silly packumentCache full:https://registry.npmjs.org/got cache-miss
+35 silly fetch manifest ulid@^2.3.0
+36 silly packumentCache full:https://registry.npmjs.org/ulid cache-miss
+37 silly fetch manifest ws@^8.17.1
+38 silly packumentCache full:https://registry.npmjs.org/ws cache-miss
+39 http fetch GET 200 https://registry.npmjs.org/ulid 808ms (cache revalidated)
+40 silly packumentCache full:https://registry.npmjs.org/ulid set size:36666 disposed:false
+41 http fetch GET 200 https://registry.npmjs.org/dequal 8903ms (cache revalidated)
+42 silly packumentCache full:https://registry.npmjs.org/dequal set size:24037 disposed:false
+43 http fetch GET 200 https://registry.npmjs.org/got 9536ms (cache revalidated)
+44 silly packumentCache full:https://registry.npmjs.org/got set size:653285 disposed:false
+45 http fetch GET 200 https://registry.npmjs.org/fastestsmallesttextencoderdecoder 10091ms (cache revalidated)
+46 silly packumentCache full:https://registry.npmjs.org/fastestsmallesttextencoderdecoder set size:148884 disposed:false
+47 http fetch GET 200 https://registry.npmjs.org/ws 11420ms (cache revalidated)
+48 silly packumentCache full:https://registry.npmjs.org/ws set size:410885 disposed:false
+49 http fetch GET 200 https://registry.npmjs.org/@ably%2fmsgpack-js 12702ms (cache revalidated)
+50 silly packumentCache full:https://registry.npmjs.org/@ably%2fmsgpack-js set size:15898 disposed:false
+51 silly fetch manifest bufferutil@^4.0.1
+52 silly packumentCache full:https://registry.npmjs.org/bufferutil cache-miss
+53 http fetch GET 200 https://registry.npmjs.org/bufferutil 742ms (cache revalidated)
+54 silly packumentCache full:https://registry.npmjs.org/bufferutil set size:51033 disposed:false
+55 silly fetch manifest utf-8-validate@>=5.0.2
+56 silly packumentCache full:https://registry.npmjs.org/utf-8-validate cache-miss
+57 http fetch GET 200 https://registry.npmjs.org/utf-8-validate 830ms (cache revalidated)
+58 silly packumentCache full:https://registry.npmjs.org/utf-8-validate set size:75205 disposed:false
+59 silly placeDep ROOT @ably/msgpack-js@0.4.1 OK for: ably@2.14.0 want: ^0.4.0
+60 silly placeDep ROOT dequal@2.0.3 OK for: ably@2.14.0 want: ^2.0.3
+61 silly placeDep ROOT fastestsmallesttextencoderdecoder@1.0.22 OK for: ably@2.14.0 want: ^1.0.22
+62 silly placeDep ROOT got@11.8.6 OK for: ably@2.14.0 want: ^11.8.5
+63 silly placeDep ROOT ulid@2.4.0 OK for: ably@2.14.0 want: ^2.3.0
+64 silly placeDep ROOT ws@8.18.3 OK for: ably@2.14.0 want: ^8.17.1
+65 silly fetch manifest bops@^1.0.1
+66 silly packumentCache full:https://registry.npmjs.org/bops cache-miss
+67 silly fetch manifest p-cancelable@^2.0.0
+68 silly packumentCache full:https://registry.npmjs.org/p-cancelable cache-miss
+69 silly fetch manifest responselike@^2.0.0
+70 silly packumentCache full:https://registry.npmjs.org/responselike cache-miss
+71 silly fetch manifest http2-wrapper@^1.0.0-beta.5.2
+72 silly packumentCache full:https://registry.npmjs.org/http2-wrapper cache-miss
+73 silly fetch manifest lowercase-keys@^2.0.0
+74 silly packumentCache full:https://registry.npmjs.org/lowercase-keys cache-miss
+75 silly fetch manifest @sindresorhus/is@^4.0.0
+76 silly packumentCache full:https://registry.npmjs.org/@sindresorhus%2fis cache-miss
+77 silly fetch manifest cacheable-lookup@^5.0.3
+78 silly packumentCache full:https://registry.npmjs.org/cacheable-lookup cache-miss
+79 http fetch GET 200 https://registry.npmjs.org/responselike 777ms (cache revalidated)
+80 silly packumentCache full:https://registry.npmjs.org/responselike set size:24370 disposed:false
+81 silly fetch manifest cacheable-request@^7.0.2
+82 silly packumentCache full:https://registry.npmjs.org/cacheable-request cache-miss
+83 http fetch GET 200 https://registry.npmjs.org/lowercase-keys 781ms (cache revalidated)
+84 silly packumentCache full:https://registry.npmjs.org/lowercase-keys set size:10125 disposed:false
+85 silly fetch manifest @types/responselike@^1.0.0
+86 silly packumentCache full:https://registry.npmjs.org/@types%2fresponselike cache-miss
+87 http fetch GET 200 https://registry.npmjs.org/cacheable-request 749ms (cache revalidated)
+88 silly packumentCache full:https://registry.npmjs.org/cacheable-request set size:276429 disposed:false
+89 silly fetch manifest decompress-response@^6.0.0
+90 silly packumentCache full:https://registry.npmjs.org/decompress-response cache-miss
+91 http fetch GET 200 https://registry.npmjs.org/@types%2fresponselike 915ms (cache revalidated)
+92 silly packumentCache full:https://registry.npmjs.org/@types%2fresponselike set size:10410 disposed:false
+93 silly fetch manifest @szmarczak/http-timer@^4.0.5
+94 silly packumentCache full:https://registry.npmjs.org/@szmarczak%2fhttp-timer cache-miss
+95 http fetch GET 200 https://registry.npmjs.org/p-cancelable 2334ms (cache revalidated)
+96 silly packumentCache full:https://registry.npmjs.org/p-cancelable set size:41253 disposed:false
+97 silly fetch manifest @types/cacheable-request@^6.0.1
+98 silly packumentCache full:https://registry.npmjs.org/@types%2fcacheable-request cache-miss
+99 http fetch GET 200 https://registry.npmjs.org/decompress-response 799ms (cache revalidated)
+100 silly packumentCache full:https://registry.npmjs.org/decompress-response set size:36213 disposed:false
+101 http fetch GET 200 https://registry.npmjs.org/http2-wrapper 2360ms (cache revalidated)
+102 silly packumentCache full:https://registry.npmjs.org/http2-wrapper set size:186724 disposed:false
+103 http fetch GET 200 https://registry.npmjs.org/@szmarczak%2fhttp-timer 1075ms (cache revalidated)
+104 silly packumentCache full:https://registry.npmjs.org/@szmarczak%2fhttp-timer set size:62682 disposed:false
+105 http fetch GET 200 https://registry.npmjs.org/@sindresorhus%2fis 4253ms (cache revalidated)
+106 silly packumentCache full:https://registry.npmjs.org/@sindresorhus%2fis set size:191311 disposed:false
+107 http fetch GET 200 https://registry.npmjs.org/bops 4947ms (cache revalidated)
+108 silly packumentCache full:https://registry.npmjs.org/bops set size:23665 disposed:false
+109 http fetch GET 200 https://registry.npmjs.org/cacheable-lookup 8099ms (cache revalidated)
+110 silly packumentCache full:https://registry.npmjs.org/cacheable-lookup set size:98104 disposed:false
+111 http fetch GET 200 https://registry.npmjs.org/@types%2fcacheable-request 6489ms (cache revalidated)
+112 silly packumentCache full:https://registry.npmjs.org/@types%2fcacheable-request set size:20679 disposed:false
+113 silly placeDep ROOT bops@1.0.1 OK for: @ably/msgpack-js@0.4.1 want: ^1.0.1
+114 silly fetch manifest base64-js@1.0.2
+115 silly packumentCache full:https://registry.npmjs.org/base64-js cache-miss
+116 silly fetch manifest to-utf8@0.0.1
+117 silly packumentCache full:https://registry.npmjs.org/to-utf8 cache-miss
+118 http fetch GET 200 https://registry.npmjs.org/base64-js 787ms (cache revalidated)
+119 silly packumentCache full:https://registry.npmjs.org/base64-js set size:41270 disposed:false
+120 http fetch GET 200 https://registry.npmjs.org/to-utf8 1389ms (cache revalidated)
+121 silly packumentCache full:https://registry.npmjs.org/to-utf8 set size:3714 disposed:false
+122 silly placeDep ROOT base64-js@1.0.2 OK for: bops@1.0.1 want: 1.0.2
+123 silly placeDep ROOT to-utf8@0.0.1 OK for: bops@1.0.1 want: 0.0.1
+124 silly placeDep ROOT @sindresorhus/is@4.6.0 OK for: got@11.8.6 want: ^4.0.0
+125 silly placeDep ROOT @szmarczak/http-timer@4.0.6 OK for: got@11.8.6 want: ^4.0.5
+126 silly placeDep ROOT @types/cacheable-request@6.0.3 OK for: got@11.8.6 want: ^6.0.1
+127 silly placeDep ROOT @types/responselike@1.0.3 OK for: got@11.8.6 want: ^1.0.0
+128 silly placeDep ROOT cacheable-lookup@5.0.4 OK for: got@11.8.6 want: ^5.0.3
+129 silly placeDep ROOT cacheable-request@7.0.4 OK for: got@11.8.6 want: ^7.0.2
+130 silly placeDep ROOT decompress-response@6.0.0 OK for: got@11.8.6 want: ^6.0.0
+131 silly placeDep ROOT http2-wrapper@1.0.3 OK for: got@11.8.6 want: ^1.0.0-beta.5.2
+132 silly placeDep ROOT lowercase-keys@2.0.0 OK for: got@11.8.6 want: ^2.0.0
+133 silly placeDep ROOT p-cancelable@2.1.1 OK for: got@11.8.6 want: ^2.0.0
+134 silly placeDep ROOT responselike@2.0.1 OK for: got@11.8.6 want: ^2.0.0
+135 silly fetch manifest defer-to-connect@^2.0.0
+136 silly packumentCache full:https://registry.npmjs.org/defer-to-connect cache-miss
+137 silly fetch manifest @types/keyv@^3.1.4
+138 silly packumentCache full:https://registry.npmjs.org/@types%2fkeyv cache-miss
+139 silly fetch manifest @types/http-cache-semantics@*
+140 silly packumentCache full:https://registry.npmjs.org/@types%2fhttp-cache-semantics cache-miss
+141 silly fetch manifest keyv@^4.0.0
+142 silly packumentCache full:https://registry.npmjs.org/keyv cache-miss
+143 silly fetch manifest get-stream@^5.1.0
+144 silly packumentCache full:https://registry.npmjs.org/get-stream cache-miss
+145 silly fetch manifest normalize-url@^6.0.1
+146 silly packumentCache full:https://registry.npmjs.org/normalize-url cache-miss
+147 silly fetch manifest clone-response@^1.0.2
+148 silly packumentCache full:https://registry.npmjs.org/clone-response cache-miss
+149 http fetch GET 200 https://registry.npmjs.org/defer-to-connect 717ms (cache revalidated)
+150 silly packumentCache full:https://registry.npmjs.org/defer-to-connect set size:26880 disposed:false
+151 silly fetch manifest http-cache-semantics@^4.0.0
+152 silly packumentCache full:https://registry.npmjs.org/http-cache-semantics cache-miss
+153 http fetch GET 200 https://registry.npmjs.org/keyv 722ms (cache revalidated)
+154 silly packumentCache full:https://registry.npmjs.org/keyv set size:230207 disposed:false
+155 silly fetch manifest mimic-response@^3.1.0
+156 silly packumentCache full:https://registry.npmjs.org/mimic-response cache-miss
+157 http fetch GET 200 https://registry.npmjs.org/@types%2fhttp-cache-semantics 740ms (cache revalidated)
+158 silly packumentCache full:https://registry.npmjs.org/@types%2fhttp-cache-semantics set size:10905 disposed:false
+159 silly fetch manifest quick-lru@^5.1.1
+160 silly packumentCache full:https://registry.npmjs.org/quick-lru cache-miss
+161 http fetch GET 200 https://registry.npmjs.org/normalize-url 740ms (cache revalidated)
+162 silly packumentCache full:https://registry.npmjs.org/normalize-url set size:132142 disposed:false
+163 silly fetch manifest resolve-alpn@^1.0.0
+164 silly packumentCache full:https://registry.npmjs.org/resolve-alpn cache-miss
+165 http fetch GET 200 https://registry.npmjs.org/get-stream 743ms (cache revalidated)
+166 silly packumentCache full:https://registry.npmjs.org/get-stream set size:57536 disposed:false
+167 http fetch GET 200 https://registry.npmjs.org/clone-response 765ms (cache revalidated)
+168 silly packumentCache full:https://registry.npmjs.org/clone-response set size:24070 disposed:false
+169 http fetch GET 200 https://registry.npmjs.org/@types%2fkeyv 1012ms (cache revalidated)
+170 silly packumentCache full:https://registry.npmjs.org/@types%2fkeyv set size:18577 disposed:false
+171 http fetch GET 200 https://registry.npmjs.org/resolve-alpn 460ms (cache revalidated)
+172 silly packumentCache full:https://registry.npmjs.org/resolve-alpn set size:19627 disposed:false
+173 http fetch GET 200 https://registry.npmjs.org/http-cache-semantics 487ms (cache revalidated)
+174 silly packumentCache full:https://registry.npmjs.org/http-cache-semantics set size:66288 disposed:false
+175 http fetch GET 200 https://registry.npmjs.org/mimic-response 487ms (cache revalidated)
+176 silly packumentCache full:https://registry.npmjs.org/mimic-response set size:20174 disposed:false
+177 http fetch GET 200 https://registry.npmjs.org/quick-lru 475ms (cache revalidated)
+178 silly packumentCache full:https://registry.npmjs.org/quick-lru set size:53443 disposed:false
+179 silly placeDep ROOT defer-to-connect@2.0.1 OK for: @szmarczak/http-timer@4.0.6 want: ^2.0.0
+180 silly placeDep ROOT @types/http-cache-semantics@4.0.4 OK for: @types/cacheable-request@6.0.3 want: *
+181 silly placeDep ROOT @types/keyv@3.1.4 OK for: @types/cacheable-request@6.0.3 want: ^3.1.4
+182 silly placeDep ROOT clone-response@1.0.3 OK for: cacheable-request@7.0.4 want: ^1.0.2
+183 silly placeDep ROOT get-stream@5.2.0 OK for: cacheable-request@7.0.4 want: ^5.1.0
+184 silly placeDep ROOT http-cache-semantics@4.2.0 OK for: cacheable-request@7.0.4 want: ^4.0.0
+185 silly placeDep ROOT keyv@4.5.4 OK for: cacheable-request@7.0.4 want: ^4.0.0
+186 silly placeDep ROOT normalize-url@6.1.0 OK for: cacheable-request@7.0.4 want: ^6.0.1
+187 silly fetch manifest mimic-response@^1.0.0
+188 silly packumentCache full:https://registry.npmjs.org/mimic-response cache-hit
+189 silly fetch manifest pump@^3.0.0
+190 silly packumentCache full:https://registry.npmjs.org/pump cache-miss
+191 silly fetch manifest json-buffer@3.0.1
+192 silly packumentCache full:https://registry.npmjs.org/json-buffer cache-miss
+193 http fetch GET 200 https://registry.npmjs.org/pump 274ms (cache revalidated)
+194 silly packumentCache full:https://registry.npmjs.org/pump set size:39621 disposed:false
+195 http fetch GET 200 https://registry.npmjs.org/json-buffer 275ms (cache revalidated)
+196 silly packumentCache full:https://registry.npmjs.org/json-buffer set size:23474 disposed:false
+197 silly placeDep ROOT mimic-response@1.0.1 OK for: clone-response@1.0.3 want: ^1.0.0
+198 silly placeDep node_modules/decompress-response mimic-response@3.1.0 OK for: decompress-response@6.0.0 want: ^3.1.0
+199 silly placeDep ROOT pump@3.0.3 OK for: get-stream@5.2.0 want: ^3.0.0
+200 silly fetch manifest end-of-stream@^1.1.0
+201 silly packumentCache full:https://registry.npmjs.org/end-of-stream cache-miss
+202 silly fetch manifest once@^1.3.1
+203 silly packumentCache full:https://registry.npmjs.org/once cache-miss
+204 http fetch GET 200 https://registry.npmjs.org/end-of-stream 214ms (cache revalidated)
+205 silly packumentCache full:https://registry.npmjs.org/end-of-stream set size:27842 disposed:false
+206 http fetch GET 200 https://registry.npmjs.org/once 215ms (cache revalidated)
+207 silly packumentCache full:https://registry.npmjs.org/once set size:11768 disposed:false
+208 silly placeDep ROOT quick-lru@5.1.1 OK for: http2-wrapper@1.0.3 want: ^5.1.1
+209 silly placeDep ROOT resolve-alpn@1.2.1 OK for: http2-wrapper@1.0.3 want: ^1.0.0
+210 silly placeDep ROOT json-buffer@3.0.1 OK for: keyv@4.5.4 want: 3.0.1
+211 silly placeDep ROOT end-of-stream@1.4.5 OK for: pump@3.0.3 want: ^1.1.0
+212 silly placeDep ROOT once@1.4.0 OK for: pump@3.0.3 want: ^1.3.1
+213 silly fetch manifest once@^1.4.0
+214 silly packumentCache full:https://registry.npmjs.org/once cache-hit
+215 silly fetch manifest wrappy@1
+216 silly packumentCache full:https://registry.npmjs.org/wrappy cache-miss
+217 http fetch GET 200 https://registry.npmjs.org/wrappy 195ms (cache revalidated)
+218 silly packumentCache full:https://registry.npmjs.org/wrappy set size:7682 disposed:false
+219 silly placeDep ROOT wrappy@1.0.2 OK for: once@1.4.0 want: 1
+220 silly reify mark retired [
+220 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-arm64'
+220 silly reify ]
+221 silly reify mark retired [
+221 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm-gnueabihf'
+221 silly reify ]
+222 silly reify mark retired [
+222 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-x64'
+222 silly reify ]
+223 silly reify mark retired [
+223 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-gnu'
+223 silly reify ]
+224 silly reify mark retired [
+224 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-musl'
+224 silly reify ]
+225 silly reify mark retired [
+225 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-freebsd-x64'
+225 silly reify ]
+226 silly reify mark retired [
+226 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-gnu'
+226 silly reify ]
+227 silly reify mark retired [
+227 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-musl'
+227 silly reify ]
+228 silly reify mark retired [
+228 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-win32-arm64-msvc'
+228 silly reify ]
+229 silly reify mark retired [
+229 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-arm64'
+229 silly reify ]
+230 silly reify mark retired [
+230 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-x64'
+230 silly reify ]
+231 silly reify mark retired [
+231 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+231 silly reify ]
+232 silly reify mark retired [
+232 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm'
+232 silly reify ]
+233 silly reify mark retired [
+233 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-x64'
+233 silly reify ]
+234 silly reify mark retired [
+234 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm64'
+234 silly reify ]
+235 silly reify mark retired [
+235 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+235 silly reify ]
+236 silly reify mark retired [
+236 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-s390x'
+236 silly reify ]
+237 silly reify mark retired [
+237 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-x64'
+237 silly reify ]
+238 silly reify mark retired [
+238 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+238 silly reify ]
+239 silly reify mark retired [
+239 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm'
+239 silly reify ]
+240 silly reify mark retired [
+240 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+240 silly reify ]
+241 silly reify mark retired [
+241 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm64'
+241 silly reify ]
+242 silly reify mark retired [
+242 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-ppc64'
+242 silly reify ]
+243 silly reify mark retired [
+243 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-s390x'
+243 silly reify ]
+244 silly reify mark retired [
+244 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-x64'
+244 silly reify ]
+245 silly reify mark retired [
+245 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-arm64'
+245 silly reify ]
+246 silly reify mark retired [
+246 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-x64'
+246 silly reify ]
+247 silly reify mark retired [
+247 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-wasm32'
+247 silly reify ]
+248 silly reify mark retired [
+248 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-arm64'
+248 silly reify ]
+249 silly reify mark retired [
+249 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-ia32'
+249 silly reify ]
+250 silly reify mark retired [
+250 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-arm64'
+250 silly reify ]
+251 silly reify mark retired [
+251 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-x64'
+251 silly reify ]
+252 silly reify mark retired [
+252 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-gnu'
+252 silly reify ]
+253 silly reify mark retired [
+253 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-musl'
+253 silly reify ]
+254 silly reify mark retired [
+254 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-gnu'
+254 silly reify ]
+255 silly reify mark retired [
+255 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-musl'
+255 silly reify ]
+256 silly reify mark retired [
+256 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-win32-arm64-msvc'
+256 silly reify ]
+257 silly reify mark retired [
+257 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-android-arm64'
+257 silly reify ]
+258 silly reify mark retired [
+258 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-arm64'
+258 silly reify ]
+259 silly reify mark retired [
+259 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-x64'
+259 silly reify ]
+260 silly reify mark retired [
+260 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-freebsd-x64'
+260 silly reify ]
+261 silly reify mark retired [
+261 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm-gnueabihf'
+261 silly reify ]
+262 silly reify mark retired [
+262 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-gnu'
+262 silly reify ]
+263 silly reify mark retired [
+263 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-musl'
+263 silly reify ]
+264 silly reify mark retired [
+264 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-gnu'
+264 silly reify ]
+265 silly reify mark retired [
+265 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-musl'
+265 silly reify ]
+266 silly reify mark retired [
+266 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-wasm32-wasi'
+266 silly reify ]
+267 silly reify mark retired [
+267 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-win32-arm64-msvc'
+267 silly reify ]
+268 silly reify mark retired [
+268 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ably'
+268 silly reify ]
+269 silly reify mark retired [
+269 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\base64-js'
+269 silly reify ]
+270 silly reify mark retired [
+270 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\bops'
+270 silly reify ]
+271 silly reify mark retired [
+271 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\cacheable-lookup'
+271 silly reify ]
+272 silly reify mark retired [
+272 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\cacheable-request'
+272 silly reify ]
+273 silly reify mark retired [
+273 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\clone-response'
+273 silly reify ]
+274 silly reify mark retired [
+274 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\decompress-response'
+274 silly reify ]
+275 silly reify mark retired [
+275 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\defer-to-connect'
+275 silly reify ]
+276 silly reify mark retired [
+276 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\dequal'
+276 silly reify ]
+277 silly reify mark retired [
+277 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\end-of-stream'
+277 silly reify ]
+278 silly reify mark retired [
+278 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\fastestsmallesttextencoderdecoder'
+278 silly reify ]
+279 silly reify mark retired [
+279 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\got'
+279 silly reify ]
+280 silly reify mark retired [
+280 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\http2-wrapper'
+280 silly reify ]
+281 silly reify mark retired [
+281 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\http-cache-semantics'
+281 silly reify ]
+282 silly reify mark retired [
+282 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\jiti',
+282 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti',
+282 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti.cmd',
+282 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti.ps1'
+282 silly reify ]
+283 silly reify mark retired [
+283 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\keyv'
+283 silly reify ]
+284 silly reify mark retired [
+284 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\get-stream'
+284 silly reify ]
+285 silly reify mark retired [
+285 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\json-buffer'
+285 silly reify ]
+286 silly reify mark retired [
+286 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\mimic-response'
+286 silly reify ]
+287 silly reify mark retired [
+287 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lowercase-keys'
+287 silly reify ]
+288 silly reify mark retired [
+288 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\once'
+288 silly reify ]
+289 silly reify mark retired [
+289 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\mkdirp',
+289 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp',
+289 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp.cmd',
+289 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp.ps1'
+289 silly reify ]
+290 silly reify mark retired [
+290 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\next',
+290 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next',
+290 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next.cmd',
+290 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next.ps1'
+290 silly reify ]
+291 silly reify mark retired [
+291 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\normalize-url'
+291 silly reify ]
+292 silly reify mark retired [
+292 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\nanoid',
+292 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid',
+292 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid.cmd',
+292 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid.ps1'
+292 silly reify ]
+293 silly reify mark retired [
+293 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\pump'
+293 silly reify ]
+294 silly reify mark retired [
+294 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\quick-lru'
+294 silly reify ]
+295 silly reify mark retired [
+295 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\resolve-alpn'
+295 silly reify ]
+296 silly reify mark retired [
+296 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\responselike'
+296 silly reify ]
+297 silly reify mark retired [
+297 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\p-cancelable'
+297 silly reify ]
+298 silly reify mark retired [
+298 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\semver',
+298 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver',
+298 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver.cmd',
+298 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver.ps1'
+298 silly reify ]
+299 silly reify mark retired [
+299 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\to-utf8'
+299 silly reify ]
+300 silly reify mark retired [
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\typescript',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc.cmd',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc.ps1',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver.cmd',
+300 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver.ps1'
+300 silly reify ]
+301 silly reify mark retired [
+301 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\wrappy'
+301 silly reify ]
+302 silly reify mark retired [
+302 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ws'
+302 silly reify ]
+303 silly reify mark retired [
+303 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ulid',
+303 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid',
+303 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid.cmd',
+303 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid.ps1'
+303 silly reify ]
+304 silly reify mark retired [
+304 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@ably\\msgpack-js'
+304 silly reify ]
+305 silly reify mark retired [
+305 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@sindresorhus\\is'
+305 silly reify ]
+306 silly reify mark retired [
+306 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@szmarczak\\http-timer'
+306 silly reify ]
+307 silly reify mark retired [
+307 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\http-cache-semantics'
+307 silly reify ]
+308 silly reify mark retired [
+308 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\keyv'
+308 silly reify ]
+309 silly reify mark retired [
+309 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\responselike'
+309 silly reify ]
+310 silly reify mark retired [
+310 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\cacheable-request'
+310 silly reify ]
+311 silly reify moves {
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-darwin-arm64-XRyN9jXt',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm-gnueabihf': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-linux-arm-gnueabihf-lMjj0Fnb',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-darwin-x64-3CR6TB3q',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-linux-arm64-gnu-dE3lxyWy',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-linux-arm64-musl-hweM8LPJ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-freebsd-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-freebsd-x64-yN8h9SZh',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-linux-x64-gnu-2JJKUkds',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-linux-x64-musl-C3VZRSWf',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-win32-arm64-msvc': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lightningcss-win32-arm64-msvc-VT2U1jqK',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-darwin-arm64-LxOGZDld',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-darwin-x64-jaScOjwy',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-darwin-arm64-PGKXSUWn',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linux-arm-AoVTYprp',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-darwin-x64-KFiWP7HM',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linux-arm64-mvXzYDyo',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-ppc64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linux-ppc64-bkkIX6Gh',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-s390x': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linux-s390x-8CyKTPsz',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linux-x64-WM3FYhiQ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linuxmusl-x64-Ja0moHb0',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linux-arm-9WzTlv4I',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-libvips-linuxmusl-arm64-EPnfaZoK',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linux-arm64-lXTswnh7',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-ppc64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linux-ppc64-YuztqQSD',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-s390x': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linux-s390x-LJ0awYA9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linux-x64-4f2ZZaT6',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linuxmusl-arm64-usHqKPgJ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-linuxmusl-x64-l58DVhir',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-wasm32': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-wasm32-5NVlyILh',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-win32-arm64-Badt36yO',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-ia32': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\.sharp-win32-ia32-Vc44o8fa',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-darwin-arm64-FFChYxIE',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-darwin-x64-lQSGeJRf',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-linux-arm64-gnu-Yt2CNUXQ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-linux-arm64-musl-Zh9pCfe9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-linux-x64-gnu-QGVYLmku',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-linux-x64-musl-MIeWLtnm',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-win32-arm64-msvc': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\.swc-win32-arm64-msvc-HHZTaLQi',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-android-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-android-arm64-hcRyovUp',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-arm64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-darwin-arm64-1SjlgLdH',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-darwin-x64-IXooA8KI',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-freebsd-x64': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-freebsd-x64-MBl7EUFP',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm-gnueabihf': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-linux-arm-gnueabihf-gz23JyK2',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-linux-arm64-gnu-a6PwZrru',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-linux-arm64-musl-Ktghs6WW',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-gnu': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-linux-x64-gnu-rQzzESam',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-musl': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-linux-x64-musl-P0sb7zRA',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-wasm32-wasi': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-wasm32-wasi-iXaWdgHT',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-win32-arm64-msvc': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\.oxide-win32-arm64-msvc-9T2HTNhF',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ably': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.ably-AaBqw3UV',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\base64-js': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.base64-js-kjp8IFXK',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\bops': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bops-WOMAry1q',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\cacheable-lookup': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.cacheable-lookup-xpAH4V9Y',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\cacheable-request': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.cacheable-request-gTZAJbDO',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\clone-response': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.clone-response-F7tGmOp6',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\decompress-response': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.decompress-response-eNyYUcUB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\defer-to-connect': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.defer-to-connect-hpZIMTZq',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\dequal': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.dequal-wajCUfyB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\end-of-stream': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.end-of-stream-VK1bdmat',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\fastestsmallesttextencoderdecoder': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.fastestsmallesttextencoderdecoder-si0iiT3u',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\got': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.got-ScjnkEQN',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\http2-wrapper': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.http2-wrapper-UnsrqAlQ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\http-cache-semantics': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.http-cache-semantics-kpJVtYFB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\jiti': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.jiti-fW7JwNS9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.jiti-qzAO61jt',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.jiti.cmd-JBRPQSDB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\jiti.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.jiti.ps1-kRtJGz3l',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\keyv': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.keyv-dFfZCoPv',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\get-stream': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.get-stream-PRewUFpZ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\json-buffer': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.json-buffer-HvJanldx',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\mimic-response': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.mimic-response-8Mrh5m6J',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lowercase-keys': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.lowercase-keys-3YPn7DIl',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\once': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.once-H2WasbIB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\mkdirp': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.mkdirp-uZOKtpSZ',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.mkdirp-v4SpOfkl',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.mkdirp.cmd-gQg5wm34',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\mkdirp.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.mkdirp.ps1-ViTlpeQs',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\next': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.next-tHeINXsW',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.next-mvyNFemC',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.next.cmd-vEYi1xjE',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\next.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.next.ps1-ZzmV4cx9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\normalize-url': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.normalize-url-uGIXy3xp',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\nanoid': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.nanoid-NA3W9PKI',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.nanoid-a1UjlpHE',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.nanoid.cmd-tzx6eU6K',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\nanoid.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.nanoid.ps1-zaD1viKm',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\pump': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.pump-wHcH4RNF',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\quick-lru': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.quick-lru-ohSRv8Dw',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\resolve-alpn': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.resolve-alpn-hOHCMYUI',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\responselike': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.responselike-MEgDFE8j',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\p-cancelable': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.p-cancelable-M4Vn9zIy',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\semver': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.semver-MKzPkqs9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.semver-FpUZTjgB',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.semver.cmd-qA5PXvFU',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\semver.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.semver.ps1-A6WZa7u9',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\to-utf8': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.to-utf8-ONVR05mu',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\typescript': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.typescript-fmPPRojW',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsc-JSl8HpZX',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsc.cmd-0NgSiZBi',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsc.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsc.ps1-9cqDvVsT',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsserver-S0lnzXXk',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsserver.cmd-9OUiqumo',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\tsserver.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.tsserver.ps1-Hfpme9qH',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\wrappy': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.wrappy-mZItE4UR',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ws': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.ws-63Hz9s58',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\ulid': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.ulid-59oX7BJn',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.ulid-XlwiLvnj',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid.cmd': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.ulid.cmd-ZPCAAzQX',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\ulid.ps1': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\.bin\\.ulid.ps1-3pivTJZL',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@ably\\msgpack-js': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@ably\\.msgpack-js-i3thP21V',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@sindresorhus\\is': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@sindresorhus\\.is-Km2SVWte',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@szmarczak\\http-timer': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@szmarczak\\.http-timer-6yuTFU01',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\http-cache-semantics': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\.http-cache-semantics-xk6aDbw8',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\keyv': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\.keyv-tuKwHvko',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\responselike': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\.responselike-XhP6P3Vb',
+311 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\cacheable-request': 'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@types\\.cacheable-request-z3LrSEyX'
+311 silly reify }
+312 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-wasm32-wasi
+313 silly reify mark deleted [
+313 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-wasm32-wasi'
+313 silly reify ]
+314 silly audit bulk request {
+314 silly audit   '@alloc/quick-lru': [ '5.2.0' ],
+314 silly audit   '@ampproject/remapping': [ '2.3.0' ],
+314 silly audit   '@emnapi/runtime': [ '1.4.5' ],
+314 silly audit   '@img/sharp-darwin-arm64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-darwin-x64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-libvips-darwin-arm64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-darwin-x64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linux-arm': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linux-arm64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linux-ppc64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linux-s390x': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linux-x64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linuxmusl-arm64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-libvips-linuxmusl-x64': [ '1.2.0' ],
+314 silly audit   '@img/sharp-linux-arm': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linux-arm64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linux-ppc64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linux-s390x': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linux-x64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linuxmusl-arm64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-linuxmusl-x64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-wasm32': [ '0.34.3' ],
+314 silly audit   '@img/sharp-win32-arm64': [ '0.34.3' ],
+314 silly audit   '@img/sharp-win32-ia32': [ '0.34.3' ],
+314 silly audit   '@img/sharp-win32-x64': [ '0.34.3' ],
+314 silly audit   '@isaacs/fs-minipass': [ '4.0.1' ],
+314 silly audit   '@jridgewell/gen-mapping': [ '0.3.12' ],
+314 silly audit   '@jridgewell/resolve-uri': [ '3.1.2' ],
+314 silly audit   '@jridgewell/sourcemap-codec': [ '1.5.4' ],
+314 silly audit   '@jridgewell/trace-mapping': [ '0.3.29' ],
+314 silly audit   '@next/env': [ '15.4.4' ],
+314 silly audit   '@next/swc-darwin-arm64': [ '15.4.4' ],
+314 silly audit   '@next/swc-darwin-x64': [ '15.4.4' ],
+314 silly audit   '@next/swc-linux-arm64-gnu': [ '15.4.4' ],
+314 silly audit   '@next/swc-linux-arm64-musl': [ '15.4.4' ],
+314 silly audit   '@next/swc-linux-x64-gnu': [ '15.4.4' ],
+314 silly audit   '@next/swc-linux-x64-musl': [ '15.4.4' ],
+314 silly audit   '@next/swc-win32-arm64-msvc': [ '15.4.4' ],
+314 silly audit   '@next/swc-win32-x64-msvc': [ '15.4.4' ],
+314 silly audit   '@swc/helpers': [ '0.5.15' ],
+314 silly audit   '@tailwindcss/node': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-android-arm64': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-darwin-arm64': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-darwin-x64': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-freebsd-x64': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-linux-arm-gnueabihf': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-linux-arm64-gnu': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-linux-arm64-musl': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-linux-x64-gnu': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-linux-x64-musl': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-win32-arm64-msvc': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/oxide-win32-x64-msvc': [ '4.1.11' ],
+314 silly audit   '@tailwindcss/postcss': [ '4.1.11' ],
+314 silly audit   '@types/node': [ '20.19.9' ],
+314 silly audit   '@types/react': [ '19.1.8' ],
+314 silly audit   '@types/react-dom': [ '19.1.6' ],
+314 silly audit   'caniuse-lite': [ '1.0.30001727' ],
+314 silly audit   chownr: [ '3.0.0' ],
+314 silly audit   'client-only': [ '0.0.1' ],
+314 silly audit   color: [ '4.2.3' ],
+314 silly audit   'color-convert': [ '2.0.1' ],
+314 silly audit   'color-name': [ '1.1.4' ],
+314 silly audit   'color-string': [ '1.9.1' ],
+314 silly audit   csstype: [ '3.1.3' ],
+314 silly audit   'detect-libc': [ '2.0.4' ],
+314 silly audit   'enhanced-resolve': [ '5.18.2' ],
+314 silly audit   'graceful-fs': [ '4.2.11' ],
+314 silly audit   'is-arrayish': [ '0.3.2' ],
+314 silly audit   jiti: [ '2.5.1' ],
+314 silly audit   lightningcss: [ '1.30.1' ],
+314 silly audit   'lightningcss-darwin-arm64': [ '1.30.1' ],
+314 silly audit   'lightningcss-darwin-x64': [ '1.30.1' ],
+314 silly audit   'lightningcss-freebsd-x64': [ '1.30.1' ],
+314 silly audit   'lightningcss-linux-arm-gnueabihf': [ '1.30.1' ],
+314 silly audit   'lightningcss-linux-arm64-gnu': [ '1.30.1' ],
+314 silly audit   'lightningcss-linux-arm64-musl': [ '1.30.1' ],
+314 silly audit   'lightningcss-linux-x64-gnu': [ '1.30.1' ],
+314 silly audit   'lightningcss-linux-x64-musl': [ '1.30.1' ],
+314 silly audit   'lightningcss-win32-arm64-msvc': [ '1.30.1' ],
+314 silly audit   'lightningcss-win32-x64-msvc': [ '1.30.1' ],
+314 silly audit   'magic-string': [ '0.30.17' ],
+314 silly audit   minipass: [ '7.1.2' ],
+314 silly audit   minizlib: [ '3.0.2' ],
+314 silly audit   mkdirp: [ '3.0.1' ],
+314 silly audit   nanoid: [ '3.3.11' ],
+314 silly audit   next: [ '15.4.4' ],
+314 silly audit   postcss: [ '8.4.31', '8.5.6' ],
+314 silly audit   picocolors: [ '1.1.1' ],
+314 silly audit   react: [ '19.1.0' ],
+314 silly audit   'react-dom': [ '19.1.0' ],
+314 silly audit   scheduler: [ '0.26.0' ],
+314 silly audit   semver: [ '7.7.2' ],
+314 silly audit   sharp: [ '0.34.3' ],
+314 silly audit   'simple-swizzle': [ '0.2.2' ],
+314 silly audit   'source-map-js': [ '1.2.1' ],
+314 silly audit   'styled-jsx': [ '5.1.6' ],
+314 silly audit   tailwindcss: [ '4.1.11' ],
+314 silly audit   tapable: [ '2.2.2' ],
+314 silly audit   tar: [ '7.4.3' ],
+314 silly audit   tslib: [ '2.8.1' ],
+314 silly audit   typescript: [ '5.8.3' ],
+314 silly audit   'undici-types': [ '6.21.0' ],
+314 silly audit   yallist: [ '5.0.0' ],
+314 silly audit   ably: [ '2.14.0' ],
+314 silly audit   '@ably/msgpack-js': [ '0.4.1' ],
+314 silly audit   dequal: [ '2.0.3' ],
+314 silly audit   fastestsmallesttextencoderdecoder: [ '1.0.22' ],
+314 silly audit   got: [ '11.8.6' ],
+314 silly audit   ulid: [ '2.4.0' ],
+314 silly audit   ws: [ '8.18.3' ],
+314 silly audit   bops: [ '1.0.1' ],
+314 silly audit   'base64-js': [ '1.0.2' ],
+314 silly audit   'to-utf8': [ '0.0.1' ],
+314 silly audit   '@sindresorhus/is': [ '4.6.0' ],
+314 silly audit   '@szmarczak/http-timer': [ '4.0.6' ],
+314 silly audit   '@types/cacheable-request': [ '6.0.3' ],
+314 silly audit   '@types/responselike': [ '1.0.3' ],
+314 silly audit   'cacheable-lookup': [ '5.0.4' ],
+314 silly audit   'cacheable-request': [ '7.0.4' ],
+314 silly audit   'decompress-response': [ '6.0.0' ],
+314 silly audit   'http2-wrapper': [ '1.0.3' ],
+314 silly audit   'lowercase-keys': [ '2.0.0' ],
+314 silly audit   'p-cancelable': [ '2.1.1' ],
+314 silly audit   responselike: [ '2.0.1' ],
+314 silly audit   'defer-to-connect': [ '2.0.1' ],
+314 silly audit   '@types/http-cache-semantics': [ '4.0.4' ],
+314 silly audit   '@types/keyv': [ '3.1.4' ],
+314 silly audit   'clone-response': [ '1.0.3' ],
+314 silly audit   'get-stream': [ '5.2.0' ],
+314 silly audit   'http-cache-semantics': [ '4.2.0' ],
+314 silly audit   keyv: [ '4.5.4' ],
+314 silly audit   'normalize-url': [ '6.1.0' ],
+314 silly audit   'mimic-response': [ '1.0.1', '3.1.0' ],
+314 silly audit   pump: [ '3.0.3' ],
+314 silly audit   'quick-lru': [ '5.1.1' ],
+314 silly audit   'resolve-alpn': [ '1.2.1' ],
+314 silly audit   'json-buffer': [ '3.0.1' ],
+314 silly audit   'end-of-stream': [ '1.4.5' ],
+314 silly audit   once: [ '1.4.0' ],
+314 silly audit   wrappy: [ '1.0.2' ],
+314 silly audit   '@tailwindcss/oxide-wasm32-wasi': [ '4.1.11' ]
+314 silly audit }
+315 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-win32-arm64-msvc
+316 silly reify mark deleted [
+316 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-win32-arm64-msvc'
+316 silly reify ]
+317 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-linux-x64-musl
+318 silly reify mark deleted [
+318 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-musl'
+318 silly reify ]
+319 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-linux-x64-gnu
+320 silly reify mark deleted [
+320 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-x64-gnu'
+320 silly reify ]
+321 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-linux-arm64-musl
+322 silly reify mark deleted [
+322 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-musl'
+322 silly reify ]
+323 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-linux-arm64-gnu
+324 silly reify mark deleted [
+324 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm64-gnu'
+324 silly reify ]
+325 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-linux-arm-gnueabihf
+326 silly reify mark deleted [
+326 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-linux-arm-gnueabihf'
+326 silly reify ]
+327 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-freebsd-x64
+328 silly reify mark deleted [
+328 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-freebsd-x64'
+328 silly reify ]
+329 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-darwin-x64
+330 silly reify mark deleted [
+330 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-x64'
+330 silly reify ]
+331 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-darwin-arm64
+332 silly reify mark deleted [
+332 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-darwin-arm64'
+332 silly reify ]
+333 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@tailwindcss\oxide-android-arm64
+334 silly reify mark deleted [
+334 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@tailwindcss\\oxide-android-arm64'
+334 silly reify ]
+335 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-win32-arm64-msvc
+336 silly reify mark deleted [
+336 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-win32-arm64-msvc'
+336 silly reify ]
+337 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-linux-x64-musl
+338 silly reify mark deleted [
+338 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-musl'
+338 silly reify ]
+339 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-linux-x64-gnu
+340 silly reify mark deleted [
+340 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-x64-gnu'
+340 silly reify ]
+341 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-linux-arm64-musl
+342 silly reify mark deleted [
+342 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-musl'
+342 silly reify ]
+343 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-linux-arm64-gnu
+344 silly reify mark deleted [
+344 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-linux-arm64-gnu'
+344 silly reify ]
+345 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-darwin-x64
+346 silly reify mark deleted [
+346 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-x64'
+346 silly reify ]
+347 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@next\swc-darwin-arm64
+348 silly reify mark deleted [
+348 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@next\\swc-darwin-arm64'
+348 silly reify ]
+349 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-win32-ia32
+350 silly reify mark deleted [
+350 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-ia32'
+350 silly reify ]
+351 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-win32-arm64
+352 silly reify mark deleted [
+352 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-win32-arm64'
+352 silly reify ]
+353 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-wasm32
+354 silly reify mark deleted [
+354 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-wasm32'
+354 silly reify ]
+355 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linuxmusl-x64
+356 silly reify mark deleted [
+356 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-x64'
+356 silly reify ]
+357 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linuxmusl-arm64
+358 silly reify mark deleted [
+358 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linuxmusl-arm64'
+358 silly reify ]
+359 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linux-x64
+360 silly reify mark deleted [
+360 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-x64'
+360 silly reify ]
+361 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linux-s390x
+362 silly reify mark deleted [
+362 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-s390x'
+362 silly reify ]
+363 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linux-ppc64
+364 silly reify mark deleted [
+364 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-ppc64'
+364 silly reify ]
+365 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linux-arm64
+366 silly reify mark deleted [
+366 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm64'
+366 silly reify ]
+367 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linuxmusl-arm64
+368 silly reify mark deleted [
+368 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-arm64'
+368 silly reify ]
+369 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-linux-arm
+370 silly reify mark deleted [
+370 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-linux-arm'
+370 silly reify ]
+371 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linuxmusl-x64
+372 silly reify mark deleted [
+372 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linuxmusl-x64'
+372 silly reify ]
+373 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linux-x64
+374 silly reify mark deleted [
+374 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-x64'
+374 silly reify ]
+375 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linux-s390x
+376 silly reify mark deleted [
+376 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-s390x'
+376 silly reify ]
+377 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linux-ppc64
+378 silly reify mark deleted [
+378 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-ppc64'
+378 silly reify ]
+379 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linux-arm64
+380 silly reify mark deleted [
+380 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm64'
+380 silly reify ]
+381 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-darwin-x64
+382 silly reify mark deleted [
+382 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-x64'
+382 silly reify ]
+383 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-linux-arm
+384 silly reify mark deleted [
+384 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-linux-arm'
+384 silly reify ]
+385 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-libvips-darwin-arm64
+386 silly reify mark deleted [
+386 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-libvips-darwin-arm64'
+386 silly reify ]
+387 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-darwin-x64
+388 silly reify mark deleted [
+388 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-x64'
+388 silly reify ]
+389 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\@img\sharp-darwin-arm64
+390 silly reify mark deleted [
+390 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\@img\\sharp-darwin-arm64'
+390 silly reify ]
+391 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-win32-arm64-msvc
+392 silly reify mark deleted [
+392 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-win32-arm64-msvc'
+392 silly reify ]
+393 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-linux-x64-musl
+394 silly reify mark deleted [
+394 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-musl'
+394 silly reify ]
+395 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-linux-x64-gnu
+396 silly reify mark deleted [
+396 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-x64-gnu'
+396 silly reify ]
+397 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-freebsd-x64
+398 silly reify mark deleted [
+398 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-freebsd-x64'
+398 silly reify ]
+399 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-linux-arm64-musl
+400 silly reify mark deleted [
+400 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-musl'
+400 silly reify ]
+401 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-linux-arm64-gnu
+402 silly reify mark deleted [
+402 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm64-gnu'
+402 silly reify ]
+403 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-darwin-x64
+404 silly reify mark deleted [
+404 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-x64'
+404 silly reify ]
+405 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-linux-arm-gnueabihf
+406 silly reify mark deleted [
+406 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-linux-arm-gnueabihf'
+406 silly reify ]
+407 verbose reify failed optional dependency C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat\node_modules\lightningcss-darwin-arm64
+408 silly reify mark deleted [
+408 silly reify   'C:\\Users\\WAFA\\Desktop\\‎Amana_Bootcamp\\Amana-Chat\\Amana-Chat\\node_modules\\lightningcss-darwin-arm64'
+408 silly reify ]
+409 http cache @types/cacheable-request@https://registry.npmjs.org/@types/cacheable-request/-/cacheable-request-6.0.3.tgz 0ms (cache hit)
+410 http cache @types/responselike@https://registry.npmjs.org/@types/responselike/-/responselike-1.0.3.tgz 0ms (cache hit)
+411 http cache @types/keyv@https://registry.npmjs.org/@types/keyv/-/keyv-3.1.4.tgz 0ms (cache hit)
+412 http cache @sindresorhus/is@https://registry.npmjs.org/@sindresorhus/is/-/is-4.6.0.tgz 0ms (cache hit)
+413 http cache @types/http-cache-semantics@https://registry.npmjs.org/@types/http-cache-semantics/-/http-cache-semantics-4.0.4.tgz 0ms (cache hit)
+414 http cache @ably/msgpack-js@https://registry.npmjs.org/@ably/msgpack-js/-/msgpack-js-0.4.1.tgz 0ms (cache hit)
+415 http cache @szmarczak/http-timer@https://registry.npmjs.org/@szmarczak/http-timer/-/http-timer-4.0.6.tgz 0ms (cache hit)
+416 http cache ulid@https://registry.npmjs.org/ulid/-/ulid-2.4.0.tgz 0ms (cache hit)
+417 http cache ws@https://registry.npmjs.org/ws/-/ws-8.18.3.tgz 0ms (cache hit)
+418 http cache typescript@https://registry.npmjs.org/typescript/-/typescript-5.8.3.tgz 0ms (cache hit)
+419 http cache semver@https://registry.npmjs.org/semver/-/semver-7.7.2.tgz 0ms (cache hit)
+420 http cache wrappy@https://registry.npmjs.org/wrappy/-/wrappy-1.0.2.tgz 0ms (cache hit)
+421 http cache responselike@https://registry.npmjs.org/responselike/-/responselike-2.0.1.tgz 0ms (cache hit)
+422 http cache p-cancelable@https://registry.npmjs.org/p-cancelable/-/p-cancelable-2.1.1.tgz 0ms (cache hit)
+423 http cache to-utf8@https://registry.npmjs.org/to-utf8/-/to-utf8-0.0.1.tgz 0ms (cache hit)
+424 http cache quick-lru@https://registry.npmjs.org/quick-lru/-/quick-lru-5.1.1.tgz 0ms (cache hit)
+425 http cache resolve-alpn@https://registry.npmjs.org/resolve-alpn/-/resolve-alpn-1.2.1.tgz 0ms (cache hit)
+426 http cache pump@https://registry.npmjs.org/pump/-/pump-3.0.3.tgz 0ms (cache hit)
+427 http cache next@https://registry.npmjs.org/next/-/next-15.4.4.tgz 0ms (cache hit)
+428 http cache normalize-url@https://registry.npmjs.org/normalize-url/-/normalize-url-6.1.0.tgz 0ms (cache hit)
+429 http cache once@https://registry.npmjs.org/once/-/once-1.4.0.tgz 0ms (cache hit)
+430 http cache nanoid@https://registry.npmjs.org/nanoid/-/nanoid-3.3.11.tgz 0ms (cache hit)
+431 http cache mkdirp@https://registry.npmjs.org/mkdirp/-/mkdirp-3.0.1.tgz 0ms (cache hit)
+432 http cache lowercase-keys@https://registry.npmjs.org/lowercase-keys/-/lowercase-keys-2.0.0.tgz 0ms (cache hit)
+433 http cache json-buffer@https://registry.npmjs.org/json-buffer/-/json-buffer-3.0.1.tgz 0ms (cache hit)
+434 http cache mimic-response@https://registry.npmjs.org/mimic-response/-/mimic-response-1.0.1.tgz 0ms (cache hit)
+435 http cache get-stream@https://registry.npmjs.org/get-stream/-/get-stream-5.2.0.tgz 0ms (cache hit)
+436 http cache jiti@https://registry.npmjs.org/jiti/-/jiti-2.5.1.tgz 0ms (cache hit)
+437 http cache http-cache-semantics@https://registry.npmjs.org/http-cache-semantics/-/http-cache-semantics-4.2.0.tgz 0ms (cache hit)
+438 http cache http2-wrapper@https://registry.npmjs.org/http2-wrapper/-/http2-wrapper-1.0.3.tgz 0ms (cache hit)
+439 http cache keyv@https://registry.npmjs.org/keyv/-/keyv-4.5.4.tgz 0ms (cache hit)
+440 http cache got@https://registry.npmjs.org/got/-/got-11.8.6.tgz 0ms (cache hit)
+441 http cache end-of-stream@https://registry.npmjs.org/end-of-stream/-/end-of-stream-1.4.5.tgz 0ms (cache hit)
+442 http cache fastestsmallesttextencoderdecoder@https://registry.npmjs.org/fastestsmallesttextencoderdecoder/-/fastestsmallesttextencoderdecoder-1.0.22.tgz 0ms (cache hit)
+443 http cache defer-to-connect@https://registry.npmjs.org/defer-to-connect/-/defer-to-connect-2.0.1.tgz 0ms (cache hit)
+444 http cache decompress-response@https://registry.npmjs.org/decompress-response/-/decompress-response-6.0.0.tgz 0ms (cache hit)
+445 http cache cacheable-lookup@https://registry.npmjs.org/cacheable-lookup/-/cacheable-lookup-5.0.4.tgz 0ms (cache hit)
+446 http cache dequal@https://registry.npmjs.org/dequal/-/dequal-2.0.3.tgz 0ms (cache hit)
+447 http cache cacheable-request@https://registry.npmjs.org/cacheable-request/-/cacheable-request-7.0.4.tgz 0ms (cache hit)
+448 http cache clone-response@https://registry.npmjs.org/clone-response/-/clone-response-1.0.3.tgz 0ms (cache hit)
+449 http cache mimic-response@https://registry.npmjs.org/mimic-response/-/mimic-response-3.1.0.tgz 0ms (cache hit)
+450 http cache bops@https://registry.npmjs.org/bops/-/bops-1.0.1.tgz 0ms (cache hit)
+451 http cache base64-js@https://registry.npmjs.org/base64-js/-/base64-js-1.0.2.tgz 0ms (cache hit)
+452 http cache ably@https://registry.npmjs.org/ably/-/ably-2.14.0.tgz 0ms (cache hit)
+453 silly tarball no local data for next@https://registry.npmjs.org/next/-/next-15.4.4.tgz. Extracting by manifest.
+454 http fetch POST 200 https://registry.npmjs.org/-/npm/v1/security/advisories/bulk 839ms
+455 silly audit report {
+455 silly audit report   next: [
+455 silly audit report     {
+455 silly audit report       id: 1107228,
+455 silly audit report       url: 'https://github.com/advisories/GHSA-g5qg-72qw-gw5v',
+455 silly audit report       title: 'Next.js Affected by Cache Key Confusion for Image Optimization API Routes',
+455 silly audit report       severity: 'moderate',
+455 silly audit report       vulnerable_versions: '>=15.0.0 <=15.4.4',
+455 silly audit report       cwe: [Array],
+455 silly audit report       cvss: [Object]
+455 silly audit report     },
+455 silly audit report     {
+455 silly audit report       id: 1107514,
+455 silly audit report       url: 'https://github.com/advisories/GHSA-xv57-4mr9-wg8v',
+455 silly audit report       title: 'Next.js Content Injection Vulnerability for Image Optimization',
+455 silly audit report       severity: 'moderate',
+455 silly audit report       vulnerable_versions: '>=15.0.0 <=15.4.4',
+455 silly audit report       cwe: [Array],
+455 silly audit report       cvss: [Object]
+455 silly audit report     },
+455 silly audit report     {
+455 silly audit report       id: 1107515,
+455 silly audit report       url: 'https://github.com/advisories/GHSA-4342-x723-ch2f',
+455 silly audit report       title: 'Next.js Improper Middleware Redirect Handling Leads to SSRF',
+455 silly audit report       severity: 'moderate',
+455 silly audit report       vulnerable_versions: '>=15.0.0-canary.0 <15.4.7',
+455 silly audit report       cwe: [Array],
+455 silly audit report       cvss: [Object]
+455 silly audit report     }
+455 silly audit report   ]
+455 silly audit report }
+456 silly packumentCache corgi:https://registry.npmjs.org/next cache-miss
+457 http fetch GET 200 https://registry.npmjs.org/next 897ms (cache revalidated)
+458 silly packumentCache corgi:https://registry.npmjs.org/next set size:22500689 disposed:false
+459 http fetch GET 200 https://registry.npmjs.org/next/-/next-15.4.4.tgz 1310570ms (cache miss)
+460 silly CHANGE node_modules/@types/cacheable-request
+461 silly CHANGE node_modules/@types/responselike
+462 silly CHANGE node_modules/@types/keyv
+463 silly CHANGE node_modules/@types/http-cache-semantics
+464 silly CHANGE node_modules/@szmarczak/http-timer
+465 silly CHANGE node_modules/@sindresorhus/is
+466 silly CHANGE node_modules/@ably/msgpack-js
+467 silly CHANGE node_modules/ulid
+468 silly CHANGE node_modules/ws
+469 silly CHANGE node_modules/wrappy
+470 silly CHANGE node_modules/typescript
+471 silly CHANGE node_modules/to-utf8
+472 silly CHANGE node_modules/semver
+473 silly CHANGE node_modules/p-cancelable
+474 silly CHANGE node_modules/responselike
+475 silly CHANGE node_modules/resolve-alpn
+476 silly CHANGE node_modules/quick-lru
+477 silly CHANGE node_modules/pump
+478 silly CHANGE node_modules/nanoid
+479 silly CHANGE node_modules/normalize-url
+480 silly CHANGE node_modules/next
+481 silly CHANGE node_modules/mkdirp
+482 silly CHANGE node_modules/once
+483 silly CHANGE node_modules/lowercase-keys
+484 silly CHANGE node_modules/mimic-response
+485 silly CHANGE node_modules/json-buffer
+486 silly CHANGE node_modules/get-stream
+487 silly CHANGE node_modules/keyv
+488 silly CHANGE node_modules/jiti
+489 silly CHANGE node_modules/http-cache-semantics
+490 silly CHANGE node_modules/http2-wrapper
+491 silly CHANGE node_modules/got
+492 silly CHANGE node_modules/fastestsmallesttextencoderdecoder
+493 silly CHANGE node_modules/end-of-stream
+494 silly CHANGE node_modules/dequal
+495 silly CHANGE node_modules/defer-to-connect
+496 silly CHANGE node_modules/decompress-response
+497 silly CHANGE node_modules/decompress-response/node_modules/mimic-response
+498 silly CHANGE node_modules/clone-response
+499 silly CHANGE node_modules/cacheable-request
+500 silly CHANGE node_modules/cacheable-lookup
+501 silly CHANGE node_modules/bops
+502 silly CHANGE node_modules/base64-js
+503 silly CHANGE node_modules/ably
+504 silly CHANGE node_modules/@tailwindcss/oxide-win32-arm64-msvc
+505 silly CHANGE node_modules/@tailwindcss/oxide-wasm32-wasi
+506 silly CHANGE node_modules/@tailwindcss/oxide-linux-x64-musl
+507 silly CHANGE node_modules/@tailwindcss/oxide-linux-x64-gnu
+508 silly CHANGE node_modules/@tailwindcss/oxide-linux-arm64-musl
+509 silly CHANGE node_modules/@tailwindcss/oxide-linux-arm64-gnu
+510 silly CHANGE node_modules/@tailwindcss/oxide-linux-arm-gnueabihf
+511 silly CHANGE node_modules/@tailwindcss/oxide-freebsd-x64
+512 silly CHANGE node_modules/@tailwindcss/oxide-darwin-x64
+513 silly CHANGE node_modules/@tailwindcss/oxide-darwin-arm64
+514 silly CHANGE node_modules/@tailwindcss/oxide-android-arm64
+515 silly CHANGE node_modules/@next/swc-win32-arm64-msvc
+516 silly CHANGE node_modules/@next/swc-linux-x64-musl
+517 silly CHANGE node_modules/@next/swc-linux-x64-gnu
+518 silly CHANGE node_modules/@next/swc-linux-arm64-musl
+519 silly CHANGE node_modules/@next/swc-linux-arm64-gnu
+520 silly CHANGE node_modules/@next/swc-darwin-x64
+521 silly CHANGE node_modules/@next/swc-darwin-arm64
+522 silly CHANGE node_modules/@img/sharp-win32-ia32
+523 silly CHANGE node_modules/@img/sharp-win32-arm64
+524 silly CHANGE node_modules/@img/sharp-wasm32
+525 silly CHANGE node_modules/@img/sharp-linuxmusl-x64
+526 silly CHANGE node_modules/@img/sharp-linuxmusl-arm64
+527 silly CHANGE node_modules/@img/sharp-linux-x64
+528 silly CHANGE node_modules/@img/sharp-linux-s390x
+529 silly CHANGE node_modules/@img/sharp-linux-ppc64
+530 silly CHANGE node_modules/@img/sharp-linux-arm64
+531 silly CHANGE node_modules/@img/sharp-libvips-linuxmusl-arm64
+532 silly CHANGE node_modules/@img/sharp-linux-arm
+533 silly CHANGE node_modules/@img/sharp-libvips-linuxmusl-x64
+534 silly CHANGE node_modules/@img/sharp-libvips-linux-x64
+535 silly CHANGE node_modules/@img/sharp-libvips-linux-s390x
+536 silly CHANGE node_modules/@img/sharp-libvips-linux-ppc64
+537 silly CHANGE node_modules/@img/sharp-libvips-linux-arm64
+538 silly CHANGE node_modules/@img/sharp-libvips-darwin-x64
+539 silly CHANGE node_modules/@img/sharp-libvips-linux-arm
+540 silly CHANGE node_modules/@img/sharp-libvips-darwin-arm64
+541 silly CHANGE node_modules/@img/sharp-darwin-x64
+542 silly CHANGE node_modules/@img/sharp-darwin-arm64
+543 silly CHANGE node_modules/lightningcss-win32-arm64-msvc
+544 silly CHANGE node_modules/lightningcss-linux-x64-musl
+545 silly CHANGE node_modules/lightningcss-linux-x64-gnu
+546 silly CHANGE node_modules/lightningcss-freebsd-x64
+547 silly CHANGE node_modules/lightningcss-linux-arm64-musl
+548 silly CHANGE node_modules/lightningcss-linux-arm64-gnu
+549 silly CHANGE node_modules/lightningcss-darwin-x64
+550 silly CHANGE node_modules/lightningcss-linux-arm-gnueabihf
+551 silly CHANGE node_modules/lightningcss-darwin-arm64
+552 verbose cwd C:\Users\WAFA\Desktop\‎Amana_Bootcamp\Amana-Chat\Amana-Chat
+553 verbose os Windows_NT 10.0.26100
+554 verbose node v22.17.1
+555 verbose npm  v10.9.2
+556 verbose exit 0
+557 info ok
