@@ -1,6 +1,5 @@
 import { NextRequest, NextResponse } from 'next/server';
 import Ably from 'ably';
-import type { Types } from 'ably';
 
 /**
  * Token Endpoint API Route
@@ -46,9 +45,10 @@ export async function GET(request: NextRequest) {
     // - 'presence': Can see who's online (enter/leave presence)
     // - 'history': Can retrieve message history
     //
-    // Note: We import Types directly from 'ably' instead of using Ably.Types
-    // because Ably is a default export, not a namespace with Types property.
-    const tokenParams: Types.TokenParams = {
+    // Note: We use Parameters utility type to extract the correct type from
+    // createTokenRequest method, which ensures type safety without needing
+    // to import Types directly (which may not be available in all Ably versions).
+    const tokenParams: Parameters<typeof ably.auth.createTokenRequest>[0] = {
       clientId: clientId, // Must match the clientId used in the client initialization
       capability: JSON.stringify({
         // Allow all operations on the chat:general channel
