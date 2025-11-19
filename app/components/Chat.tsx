@@ -243,106 +243,12 @@ export default function Chat() {
     setMessageText(''); // Clear input immediately
 
     try {
-      // 1. Publish user message to Ably channel
+      // Publish user message to Ably channel
       await channelRef.current.publish('message', {
         text: userMessage,
         sender: username,
         timestamp: Date.now(),
       });
-
-      // 2. Send message to AI API and get reply
-      try {
-        console.log('[Chat] Sending message to AI API:', userMessage);
-        
-        const aiResponse = await fetch('/api/ai-reply', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({ message: userMessage }),
-        });
-
-        // 📋 Prompt 4: Prevent app from crashing when fetch fails
-        if (!aiResponse.ok) {
-          const errorText = await aiResponse.text().catch(() => 'Unknown error');
-          console.error('[Chat] AI API route error:', {
-            status: aiResponse.status,
-            statusText: aiResponse.statusText,
-            error: errorText,
-          });
-          
-          // Show user-friendly error message
-          if (channelRef.current) {
-            await channelRef.current.publish('message', {
-              text: 'Sorry, I encountered an error. Please try again later.',
-              sender: 'Amana AI Assistant',
-              timestamp: Date.now(),
-            });
-          }
-          return;
-        }
-
-        // 📋 Prompt 4: Safely parse JSON response
-        let data: any = {};
-        try {
-          data = await aiResponse.json();
-          console.log('[Chat] AI API response received:', data);
-        } catch (parseError: any) {
-          console.error('[Chat] Failed to parse AI API response:', parseError);
-          if (channelRef.current) {
-            await channelRef.current.publish('message', {
-              text: 'Sorry, I received an invalid response. Please try again.',
-              sender: 'Amana AI Assistant',
-              timestamp: Date.now(),
-            });
-          }
-          return;
-        }
-
-        const reply = data.reply || data.error || 'Sorry, I could not generate a reply.';
-        console.log('[Chat] Extracted reply:', reply.substring(0, 100));
-        
-        // 3. Publish AI reply to Ably channel so everyone sees it
-        // Always publish the reply (even if it's an error message) so user knows what happened
-        if (reply && channelRef.current) {
-          await channelRef.current.publish('message', {
-            text: reply,
-            sender: 'Amana AI Assistant',
-            timestamp: Date.now(),
-          });
-          
-          // Log different messages based on reply type
-          if (reply.includes('rate-limited')) {
-            console.warn('[Chat] Rate limit error published to chat');
-          } else if (reply.includes('unavailable') || reply.includes('error')) {
-            console.warn('[Chat] Error message published to chat:', reply);
-          } else {
-            console.log('[Chat] AI reply published successfully');
-          }
-        } else {
-          console.warn('[Chat] No reply to publish');
-        }
-      } catch (aiError: any) {
-        // 📋 Prompt 4: Log error details and show user-friendly message
-        console.error('[Chat] Error getting AI reply:', {
-          name: aiError?.name,
-          message: aiError?.message,
-          stack: aiError?.stack,
-        });
-        
-        // Show user-friendly error message
-        if (channelRef.current) {
-          try {
-            await channelRef.current.publish('message', {
-              text: 'Sorry, I encountered an error. Please try again later.',
-              sender: 'Amana AI Assistant',
-              timestamp: Date.now(),
-            });
-          } catch (publishError) {
-            console.error('[Chat] Failed to publish error message:', publishError);
-          }
-        }
-      }
     } catch (error) {
       console.error('Error sending message:', error);
       alert('Failed to send message. Please try again.');
@@ -572,7 +478,6 @@ export default function Chat() {
               ) : (
                 messages.map((message) => {
                   const isOwnMessage = message.sender === username;
-                  const isAIMessage = message.sender === 'Amana AI Assistant';
                   return (
                     <div
                       key={message.id}
@@ -580,8 +485,8 @@ export default function Chat() {
                     >
                       {/* Avatar for received messages */}
                       {!isOwnMessage && (
-                        <div className={`${isAIMessage ? 'bg-gradient-to-br from-purple-500 to-pink-500' : getAvatarColor(message.sender)} w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
-                          {isAIMessage ? 'AI' : getInitials(message.sender)}
+                        <div className={`${getAvatarColor(message.sender)} w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
+                          {getInitials(message.sender)}
                         </div>
                       )}
                       
@@ -591,20 +496,12 @@ export default function Chat() {
                           className={`px-4 py-2.5 rounded-2xl shadow-sm ${
                             isOwnMessage
                               ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-br-sm'
-                              : isAIMessage
-                              ? 'bg-gradient-to-r from-purple-100 to-pink-100 text-gray-800 border border-purple-200 rounded-bl-sm'
                               : 'bg-white text-gray-800 border border-gray-200 rounded-bl-sm'
                           }`}
                         >
                           {/* Sender name (only for received messages) */}
                           {!isOwnMessage && (
-                            <p className={`text-xs font-semibold mb-1 ${
-                              isOwnMessage 
-                                ? 'text-blue-100' 
-                                : isAIMessage
-                                ? 'text-purple-600'
-                                : 'text-indigo-600'
-                            }`}>
+                            <p className="text-xs font-semibold mb-1 text-indigo-600">
                               {message.sender}
                             </p>
                           )}
