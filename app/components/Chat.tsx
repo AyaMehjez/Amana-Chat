@@ -96,13 +96,16 @@ export default function Chat() {
         const Ably = (await import('ably')).default;
         
         // Initialize Ably Realtime client with token authentication
-        // Using authUrl instead of authCallback to avoid TypeScript issues
-        const clientOptions: any = {
-          authUrl: `/api/ably-token?clientId=${encodeURIComponent(clientId)}`,
+        // Only use supported ClientOptions properties to avoid TypeScript errors
+        const client = new Ably.Realtime({
+          authCallback: (tokenParams: any, callback: (error: any, tokenRequest: any) => void) => {
+            // Return the token request we already fetched
+            callback(null, tokenRequest);
+          },
           clientId: clientId,
-        };
-        
-        const client = new Ably.Realtime(clientOptions);
+          // Note: connectionStateTtl, realtimeRequestTimeout, and httpMaxRetryCount
+          // are not supported in ClientOptions and have been removed
+        });
 
         ablyClientRef.current = client;
         const channel = client.channels.get('chat:general');
