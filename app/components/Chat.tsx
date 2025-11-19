@@ -77,10 +77,20 @@ export default function Chat() {
         
         const tokenRequest = await response.json();
         
+        // Log token structure for debugging
+        console.log('Token request received:', Object.keys(tokenRequest));
+        
         // Validate token request structure
-        if (!tokenRequest || !tokenRequest.token) {
+        // Ably token request should have at least some fields
+        if (!tokenRequest || typeof tokenRequest !== 'object') {
           console.error('Invalid token request structure:', tokenRequest);
           throw new Error('Invalid token response');
+        }
+        
+        // Check if it's an error response
+        if (tokenRequest.error) {
+          console.error('Token request error:', tokenRequest.error);
+          throw new Error(tokenRequest.error || 'Failed to get token');
         }
         
         const Ably = (await import('ably')).default;

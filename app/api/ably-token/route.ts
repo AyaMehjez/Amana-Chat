@@ -77,6 +77,9 @@ export async function GET(request: NextRequest) {
 
     const tokenRequest = await Promise.race([tokenRequestPromise, timeoutPromise]) as any;
 
+    // Log token structure for debugging
+    console.log('Token request generated:', Object.keys(tokenRequest));
+    
     // إرجاع التوكن للعميل
     return NextResponse.json(tokenRequest);
   } catch (error: any) {
