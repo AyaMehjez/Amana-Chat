@@ -38,6 +38,7 @@ export default function Chat() {
   
   // Refs
   const messagesEndRef = useRef<HTMLDivElement>(null);
+  const messagesContainerRef = useRef<HTMLDivElement>(null);
   // Note: Using 'any' type to avoid TypeScript import issues with Ably Types
   const ablyClientRef = useRef<any>(null);
   const channelRef = useRef<any>(null);
@@ -176,24 +177,61 @@ export default function Chat() {
 
   // Auto-scroll to bottom on new messages
   useEffect(() => {
-    messagesEndRef.current?.scrollIntoView({ behavior: 'smooth' });
+    // Use a more stable scrolling method to prevent jitter
+    if (messagesContainerRef.current) {
+      // Scroll instantly to bottom without animation to prevent jitter
+      messagesContainerRef.current.scrollTop = messagesContainerRef.current.scrollHeight;
+    }
   }, [messages]);
 
   // Send message handler
   const handleSendMessage = async () => {
     if (!messageText.trim() || !channelRef.current || !isConnected) return;
 
+    const userMessage = messageText.trim();
+    setMessageText(''); // Clear input immediately
+
     try {
+      // 1. Publish user message to Ably channel
       await channelRef.current.publish('message', {
-        text: messageText.trim(),
+        text: userMessage,
         sender: username,
         timestamp: Date.now(),
       });
 
-      setMessageText('');
+      // 2. Send message to AI API and get reply
+      try {
+        const aiResponse = await fetch('/api/ai-reply', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          body: JSON.stringify({ message: userMessage }),
+        });
+
+        if (aiResponse.ok) {
+          const { reply } = await aiResponse.json();
+          
+          // 3. Publish AI reply to Ably channel so everyone sees it
+          if (reply && channelRef.current) {
+            await channelRef.current.publish('message', {
+              text: reply,
+              sender: 'Amana AI Assistant',
+              timestamp: Date.now(),
+            });
+          }
+        } else {
+          console.error('Failed to get AI reply');
+        }
+      } catch (aiError) {
+        console.error('Error getting AI reply:', aiError);
+        // Don't show error to user, just log it
+      }
     } catch (error) {
       console.error('Error sending message:', error);
       alert('Failed to send message. Please try again.');
+      // Restore message text if sending failed
+      setMessageText(userMessage);
     }
   };
 
@@ -232,18 +270,37 @@ export default function Chat() {
   };
 
   // Generate avatar color based on username
+  // Uses hash of entire username for better color distribution
+  // Supports unlimited users - each gets a unique color based on their username
   const getAvatarColor = (name: string) => {
+    // Extended color palette with 16 distinct colors
     const colors = [
       'bg-blue-500',
       'bg-purple-500',
       'bg-pink-500',
       'bg-indigo-500',
       'bg-green-500',
-      'bg-yellow-500',
       'bg-red-500',
       'bg-teal-500',
+      'bg-cyan-500',
+      'bg-emerald-500',
+      'bg-violet-500',
+      'bg-fuchsia-500',
+      'bg-rose-500',
+      'bg-orange-500',
+      'bg-amber-500',
+      'bg-lime-500',
+      'bg-sky-500',
     ];
-    const index = name.charCodeAt(0) % colors.length;
+    
+    // Create a simple hash from the entire username for better distribution
+    let hash = 0;
+    for (let i = 0; i < name.length; i++) {
+      hash = name.charCodeAt(i) + ((hash << 5) - hash);
+    }
+    
+    // Use absolute value and modulo to get index
+    const index = Math.abs(hash) % colors.length;
     return colors[index];
   };
 
@@ -385,7 +442,7 @@ export default function Chat() {
           <main className="flex-1 flex flex-col bg-gray-50">
             
             {/* Messages List - Scrollable */}
-            <div className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4">
+            <div ref={messagesContainerRef} className="flex-1 overflow-y-auto p-4 md:p-6 space-y-4">
               {messages.length === 0 ? (
                 <div className="flex flex-col items-center justify-center h-full text-center">
                   <div className="w-20 h-20 bg-gradient-to-br from-blue-100 to-indigo-100 rounded-full flex items-center justify-center mb-4">
@@ -399,6 +456,7 @@ export default function Chat() {
               ) : (
                 messages.map((message) => {
                   const isOwnMessage = message.sender === username;
+                  const isAIMessage = message.sender === 'Amana AI Assistant';
                   return (
                     <div
                       key={message.id}
@@ -406,8 +464,8 @@ export default function Chat() {
                     >
                       {/* Avatar for received messages */}
                       {!isOwnMessage && (
-                        <div className={`${getAvatarColor(message.sender)} w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
-                          {getInitials(message.sender)}
+                        <div className={`${isAIMessage ? 'bg-gradient-to-br from-purple-500 to-pink-500' : getAvatarColor(message.sender)} w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-semibold flex-shrink-0`}>
+                          {isAIMessage ? 'AI' : getInitials(message.sender)}
                         </div>
                       )}
                       
@@ -417,13 +475,19 @@ export default function Chat() {
                           className={`px-4 py-2.5 rounded-2xl shadow-sm ${
                             isOwnMessage
                               ? 'bg-gradient-to-r from-blue-500 to-indigo-600 text-white rounded-br-sm'
+                              : isAIMessage
+                              ? 'bg-gradient-to-r from-purple-100 to-pink-100 text-gray-800 border border-purple-200 rounded-bl-sm'
                               : 'bg-white text-gray-800 border border-gray-200 rounded-bl-sm'
                           }`}
                         >
                           {/* Sender name (only for received messages) */}
                           {!isOwnMessage && (
                             <p className={`text-xs font-semibold mb-1 ${
-                              isOwnMessage ? 'text-blue-100' : 'text-indigo-600'
+                              isOwnMessage 
+                                ? 'text-blue-100' 
+                                : isAIMessage
+                                ? 'text-purple-600'
+                                : 'text-indigo-600'
                             }`}>
                               {message.sender}
                             </p>
