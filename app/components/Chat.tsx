@@ -96,15 +96,23 @@ export default function Chat() {
         const Ably = (await import('ably')).default;
         
         // Initialize Ably Realtime client with token authentication
-        // Only use supported ClientOptions properties to avoid TypeScript errors
+        // 
+        // IMPORTANT: The following properties are NOT supported in Ably SDK ClientOptions:
+        // - connectionStateTtl: This was never a valid ClientOptions property
+        // - realtimeRequestTimeout: Not available in ClientOptions (may be available in other config contexts)
+        // - httpMaxRetryCount: Not available in ClientOptions (may be available in Rest client options)
+        //
+        // These properties were likely from older SDK versions or incorrect documentation.
+        // The current Ably SDK only supports these ClientOptions properties:
+        // - authCallback, authUrl, authToken, key, tokenDetails, tokenRequest
+        // - clientId, logLevel, logHandlers, etc.
+        //
         const client = new Ably.Realtime({
           authCallback: (tokenParams: any, callback: (error: any, tokenRequest: any) => void) => {
-            // Return the token request we already fetched
+            // Return the token request we already fetched from our secure token endpoint
             callback(null, tokenRequest);
           },
           clientId: clientId,
-          // Note: connectionStateTtl, realtimeRequestTimeout, and httpMaxRetryCount
-          // are not supported in ClientOptions and have been removed
         });
 
         ablyClientRef.current = client;
