@@ -100,10 +100,6 @@ export default function Chat() {
             callback(null, tokenRequest);
           },
           clientId: clientId,
-          // Add connection timeout settings
-          connectionStateTtl: 120000, // 2 minutes
-          realtimeRequestTimeout: 10000, // 10 seconds
-          httpMaxRetryCount: 2, // Reduce retries
         });
 
         ablyClientRef.current = client;
