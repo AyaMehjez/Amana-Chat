@@ -24,9 +24,12 @@ Create `.env.local` file:
 ```env
 ABLY_API_KEY=your_ably_api_key_here
 
-# Optional: AI API Configuration
-AI_API_URL=https://apifreellm.com/api/chat  # Custom API endpoint (default: https://apifreellm.com/api/chat)
-AI_API_ENABLED=true                          # Set to 'false' to use mock responses (default: 'true')
+# OpenAI API Configuration
+OPENAI_API_KEY=your_openai_api_key_here     # Required for AI replies (get from https://platform.openai.com/api-keys)
+OPENAI_MODEL=gpt-3.5-turbo                  # Optional: Model to use (default: gpt-3.5-turbo)
+AI_API_ENABLED=true                          # Optional: Set to 'false' to use mock responses and bypass Rate Limit (default: 'true')
+
+# ⚠️ If you encounter Rate Limit errors (429), set AI_API_ENABLED=false temporarily
 ```
 
 ### Run Locally
@@ -45,14 +48,15 @@ Open [http://localhost:3000](http://localhost:3000)
 2. Import project in Vercel
 3. Add environment variables:
    - `ABLY_API_KEY` (required)
-   - `AI_API_URL` (optional - custom AI API endpoint)
+   - `OPENAI_API_KEY` (required for AI replies)
+   - `OPENAI_MODEL` (optional - default: gpt-3.5-turbo)
    - `AI_API_ENABLED` (optional - set to `false` to use mock responses)
 4. Deploy
 
 **Note:** If the AI API is unreachable on Vercel, you can:
 - Set `AI_API_ENABLED=false` to use mock responses for testing
-- Set `AI_API_URL` to a different endpoint that works on Vercel
 - Check Vercel logs for detailed error messages
+- Verify your OpenAI API key is correct and has sufficient credits
 
 ## Tech Stack
 

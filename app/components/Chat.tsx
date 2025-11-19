@@ -303,29 +303,24 @@ export default function Chat() {
         console.log('[Chat] Extracted reply:', reply.substring(0, 100));
         
         // 3. Publish AI reply to Ably channel so everyone sees it
-        // Only publish if we got a valid reply (not an error message)
-        if (reply && 
-            !reply.includes('Sorry, I encountered an error') && 
-            !reply.includes('having trouble connecting') &&
-            !reply.includes('took too long') &&
-            !reply.includes('currently unavailable') &&
-            channelRef.current) {
+        // Always publish the reply (even if it's an error message) so user knows what happened
+        if (reply && channelRef.current) {
           await channelRef.current.publish('message', {
             text: reply,
             sender: 'Amana AI Assistant',
             timestamp: Date.now(),
           });
-          console.log('[Chat] AI reply published successfully');
-        } else {
-          console.warn('[Chat] AI reply was empty or error message:', reply);
-          // Still publish the reply so user knows what happened
-          if (channelRef.current && reply) {
-            await channelRef.current.publish('message', {
-              text: reply,
-              sender: 'Amana AI Assistant',
-              timestamp: Date.now(),
-            });
+          
+          // Log different messages based on reply type
+          if (reply.includes('rate-limited')) {
+            console.warn('[Chat] Rate limit error published to chat');
+          } else if (reply.includes('unavailable') || reply.includes('error')) {
+            console.warn('[Chat] Error message published to chat:', reply);
+          } else {
+            console.log('[Chat] AI reply published successfully');
           }
+        } else {
+          console.warn('[Chat] No reply to publish');
         }
       } catch (aiError: any) {
         // 📋 Prompt 4: Log error details and show user-friendly message

@@ -3,11 +3,12 @@ import { NextRequest, NextResponse } from 'next/server';
 /**
  * AI Reply API Route
  * 
- * Sends user message to external AI API and returns AI reply
- * Handles multiple response formats and provides clear fallback messages
+ * Sends user message to OpenAI API and returns AI reply
+ * Handles OpenAI API responses and provides clear fallback messages
  * 
  * Environment Variables:
- * - AI_API_URL: Custom API endpoint (default: https://apifreellm.com/api/chat)
+ * - OPENAI_API_KEY: OpenAI API key (required)
+ * - OPENAI_MODEL: Model to use (default: gpt-3.5-turbo)
  * - AI_API_ENABLED: Set to 'false' to use mock responses (default: 'true')
  */
 
@@ -40,22 +41,59 @@ export async function POST(request: NextRequest) {
     console.log('[AI Route] Timestamp:', new Date().toISOString());
 
     // Check if AI API is disabled (for testing/mocking)
+    // ✅ SOLUTION: Set AI_API_ENABLED=false in .env.local to bypass Rate Limit issues
     const aiApiEnabled = process.env.AI_API_ENABLED !== 'false';
     if (!aiApiEnabled) {
-      console.log('[AI Route] AI API disabled, using mock response');
+      console.log('[AI Route] ====== USING MOCK RESPONSE ======');
+      console.log('[AI Route] AI API disabled via AI_API_ENABLED=false');
+      console.log('[AI Route] This bypasses Rate Limit issues for testing');
       const mockReply = getMockResponse(trimmedMessage);
       return NextResponse.json({ reply: mockReply });
     }
 
-    // Get API URL from environment or use default
-    const apiUrl = process.env.AI_API_URL || 'https://apifreellm.com/api/chat';
+    // Get OpenAI API key from environment
+    const openaiApiKey = process.env.OPENAI_API_KEY;
+    if (!openaiApiKey) {
+      console.error('[AI Route] ====== CONFIGURATION ERROR ======');
+      console.error('[AI Route] OPENAI_API_KEY is not set in environment variables');
+      console.error('[AI Route] Please add OPENAI_API_KEY to your .env.local file');
+      return NextResponse.json({
+        reply: 'AI Assistant is currently unavailable. Please configure OpenAI API key.',
+      }, { status: 200 });
+    }
+    
+    // Validate API key format
+    if (!openaiApiKey.startsWith('sk-')) {
+      console.error('[AI Route] ====== INVALID API KEY FORMAT ======');
+      console.error('[AI Route] API key should start with "sk-"');
+      console.error('[AI Route] Current key starts with:', openaiApiKey.substring(0, 5));
+      return NextResponse.json({
+        reply: 'AI Assistant configuration error. Please check your OpenAI API key.',
+      }, { status: 200 });
+    }
+
+    // Get model from environment or use default
+    const model = process.env.OPENAI_MODEL || 'gpt-3.5-turbo';
+    const apiUrl = 'https://api.openai.com/v1/chat/completions';
+    
+    // OpenAI API request body
     const requestBody = {
-      prompt: trimmedMessage,
-      message: trimmedMessage,
+      model: model,
+      messages: [
+        {
+          role: 'user',
+          content: trimmedMessage,
+        },
+      ],
     };
 
+    console.log('[AI Route] ====== REQUEST CONFIGURATION ======');
     console.log('[AI Route] API URL:', apiUrl);
-    console.log('[AI Route] Request body:', JSON.stringify(requestBody));
+    console.log('[AI Route] Model:', model);
+    console.log('[AI Route] API Key present:', openaiApiKey ? 'Yes (hidden)' : 'No');
+    console.log('[AI Route] API Key length:', openaiApiKey ? openaiApiKey.length : 0);
+    console.log('[AI Route] API Key starts with:', openaiApiKey ? openaiApiKey.substring(0, 7) + '...' : 'N/A');
+    console.log('[AI Route] Request body:', JSON.stringify(requestBody, null, 2));
 
     // Send request to external API with timeout
     const controller = new AbortController();
@@ -66,12 +104,19 @@ export async function POST(request: NextRequest) {
     let errorType: 'network' | 'timeout' | 'http' | 'parse' | 'empty' | 'none' = 'none';
 
     try {
-      console.log('[AI Route] Starting fetch request...');
+      console.log('[AI Route] Starting fetch request to OpenAI...');
+      console.log('[AI Route] Request URL:', apiUrl);
+      console.log('[AI Route] Request Method: POST');
+      console.log('[AI Route] Request Headers:', {
+        'Content-Type': 'application/json',
+        'Authorization': 'Bearer sk-...' + openaiApiKey.substring(openaiApiKey.length - 4),
+      });
+      
       response = await fetch(apiUrl, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
-          'Accept': 'application/json',
+          'Authorization': `Bearer ${openaiApiKey}`,
         },
         body: JSON.stringify(requestBody),
         signal: controller.signal,
@@ -85,6 +130,16 @@ export async function POST(request: NextRequest) {
       console.log('[AI Route] Status Text:', response.statusText);
       console.log('[AI Route] OK:', response.ok);
       console.log('[AI Route] Headers:', Object.fromEntries(response.headers.entries()));
+      
+      // Log rate limit headers if present
+      const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
+      const rateLimitLimit = response.headers.get('x-ratelimit-limit');
+      const rateLimitReset = response.headers.get('x-ratelimit-reset');
+      if (rateLimitRemaining !== null) {
+        console.log('[AI Route] Rate Limit Remaining:', rateLimitRemaining);
+        console.log('[AI Route] Rate Limit Limit:', rateLimitLimit);
+        console.log('[AI Route] Rate Limit Reset:', rateLimitReset);
+      }
 
       // Read response body
       try {
@@ -106,14 +161,49 @@ export async function POST(request: NextRequest) {
         console.error('[AI Route] ====== HTTP ERROR ======');
         console.error('[AI Route] Status Code:', response.status);
         console.error('[AI Route] Status Text:', response.statusText);
-        console.error('[AI Route] Response Body:', rawResponseText.substring(0, 1000));
+        console.error('[AI Route] Response Body (full):', rawResponseText);
+        
+        // Try to parse error response for more details
+        try {
+          const errorData = JSON.parse(rawResponseText);
+          console.error('[AI Route] Error Details:', JSON.stringify(errorData, null, 2));
+          
+          // Check for OpenAI-specific error messages
+          if (errorData.error) {
+            console.error('[AI Route] OpenAI Error Type:', errorData.error.type);
+            console.error('[AI Route] OpenAI Error Message:', errorData.error.message);
+            console.error('[AI Route] OpenAI Error Code:', errorData.error.code);
+          }
+        } catch (e) {
+          console.error('[AI Route] Could not parse error response as JSON');
+        }
         
         // Return different messages based on status code
         let errorMessage = 'AI Assistant is currently unavailable. Please try again later.';
         if (response.status === 401 || response.status === 403) {
-          errorMessage = 'AI service authentication failed. Please check API configuration.';
+          errorMessage = 'AI service authentication failed. Please check your OpenAI API key.';
         } else if (response.status === 429) {
-          errorMessage = 'AI service is rate-limited. Please try again in a moment.';
+          // Extract rate limit information from headers
+          const retryAfter = response.headers.get('retry-after');
+          const rateLimitRemaining = response.headers.get('x-ratelimit-remaining');
+          const rateLimitLimit = response.headers.get('x-ratelimit-limit');
+          
+          console.error('[AI Route] ====== RATE LIMIT HIT ======');
+          console.error('[AI Route] Retry After (seconds):', retryAfter || 'Not specified');
+          console.error('[AI Route] Rate Limit Remaining:', rateLimitRemaining || 'Unknown');
+          console.error('[AI Route] Rate Limit Limit:', rateLimitLimit || 'Unknown');
+          console.error('[AI Route] SUGGESTIONS:');
+          console.error('[AI Route] 1. Wait before making another request');
+          console.error('[AI Route] 2. Check your OpenAI API usage at https://platform.openai.com/usage');
+          console.error('[AI Route] 3. Consider upgrading your OpenAI plan if you need higher limits');
+          console.error('[AI Route] 4. Make sure you are using gpt-3.5-turbo (not gpt-4) if you have free tier');
+          
+          if (retryAfter) {
+            const waitSeconds = parseInt(retryAfter);
+            errorMessage = `AI service is rate-limited. Please wait ${waitSeconds} seconds and try again.`;
+          } else {
+            errorMessage = 'AI service is rate-limited. Please wait a moment and try again.';
+          }
         } else if (response.status >= 500) {
           errorMessage = 'AI service is experiencing issues. Please try again later.';
         }
@@ -150,21 +240,33 @@ export async function POST(request: NextRequest) {
         console.log('[AI Route] Using raw text as fallback');
       }
 
-      // Extract reply from all possible fields
-      const reply =
-        data.reply ||
-        data.message ||
-        data.text ||
-        data.response ||
-        data.content ||
-        data.answer ||
-        data.output ||
-        data.rawText ||
-        (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) ||
-        (data.data && (data.data.message || data.data.reply || data.data.text)) ||
-        (data.result && (data.result.message || data.result.text || data.result.reply)) ||
-        (typeof data === 'string' ? data : null) ||
-        null;
+      // Extract reply from OpenAI API response structure
+      // OpenAI API returns: { choices: [{ message: { content: "..." } }] }
+      let reply: string | null = null;
+      
+      if (data.choices && Array.isArray(data.choices) && data.choices.length > 0) {
+        const firstChoice = data.choices[0];
+        if (firstChoice.message && firstChoice.message.content) {
+          reply = firstChoice.message.content;
+        }
+      }
+      
+      // Fallback to other possible fields (for compatibility)
+      if (!reply) {
+        reply =
+          data.reply ||
+          data.message ||
+          data.text ||
+          data.response ||
+          data.content ||
+          data.answer ||
+          data.output ||
+          data.rawText ||
+          (data.data && (data.data.message || data.data.reply || data.data.text)) ||
+          (data.result && (data.result.message || data.result.text || data.result.reply)) ||
+          (typeof data === 'string' ? data : null) ||
+          null;
+      }
 
       console.log('[AI Route] ====== REPLY EXTRACTION ======');
       console.log('[AI Route] Extracted reply:', reply ? `"${reply.substring(0, 200)}..."` : 'null/empty');
