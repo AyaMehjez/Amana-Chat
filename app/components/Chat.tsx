@@ -95,12 +95,13 @@ export default function Chat() {
         
         const Ably = (await import('ably')).default;
         
+        // Initialize Ably Realtime client with token authentication
         const client = new Ably.Realtime({
-          authCallback: (tokenParams, callback) => {
+          authCallback: (tokenParams: any, callback: (error: any, tokenRequest: any) => void) => {
             callback(null, tokenRequest);
           },
           clientId: clientId,
-        });
+        } as any);
 
         ablyClientRef.current = client;
         const channel = client.channels.get('chat:general');
