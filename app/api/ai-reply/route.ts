@@ -4,6 +4,7 @@ import { NextRequest, NextResponse } from 'next/server';
  * AI Reply API Route
  * 
  * Sends user message to ApiFreeLLM and returns AI reply
+ * Handles multiple response formats and provides clear fallback messages
  */
 
 export async function POST(request: NextRequest) {
@@ -13,7 +14,7 @@ export async function POST(request: NextRequest) {
     // Validate message
     if (!message || typeof message !== 'string' || !message.trim()) {
       return NextResponse.json(
-        { error: 'Message is required' },
+        { reply: 'Invalid request' },
         { status: 400 }
       );
     }
@@ -30,7 +31,8 @@ export async function POST(request: NextRequest) {
           'Accept': 'application/json',
         },
         body: JSON.stringify({
-          message: message.trim(),
+          prompt: message.trim(), // Try 'prompt' as ApiFreeLLM might expect this
+          message: message.trim(), // Also include 'message' as fallback
         }),
         signal: controller.signal,
       });
@@ -41,10 +43,9 @@ export async function POST(request: NextRequest) {
         const errorText = await response.text().catch(() => 'Unknown error');
         console.error('ApiFreeLLM API error:', response.status, errorText);
         
-        // Return a friendly error message instead of throwing
+        // Return a friendly error message
         return NextResponse.json({
-          error: 'API request failed',
-          reply: 'Sorry, I am having trouble connecting right now. Please try again later.',
+          reply: 'AI service error. Please try again later.',
         }, { status: 200 }); // Return 200 so client can handle gracefully
       }
 
@@ -52,27 +53,32 @@ export async function POST(request: NextRequest) {
       console.log('ApiFreeLLM response structure:', Object.keys(data));
       console.log('ApiFreeLLM response sample:', JSON.stringify(data).substring(0, 300));
 
-      // Extract reply from response - try multiple possible structures
-      const reply = data.reply || 
-                    data.message || 
-                    data.text || 
-                    data.response || 
-                    data.content ||
-                    data.answer ||
-                    data.output ||
-                    (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) ||
-                    (data.data && (data.data.message || data.data.reply || data.data.text)) ||
-                    (typeof data === 'string' ? data : null) ||
-                    'Sorry, I could not generate a reply.';
+      // ✅ جرب كل الحقول المحتملة - Try all possible response fields
+      const reply =
+        data.reply ||
+        data.message ||
+        data.text ||
+        data.response ||
+        data.content ||
+        data.answer ||
+        data.output ||
+        (data.choices && data.choices[0] && data.choices[0].message && data.choices[0].message.content) ||
+        (data.data && (data.data.message || data.data.reply || data.data.text)) ||
+        (typeof data === 'string' ? data : null) ||
+        'AI Assistant is currently unavailable. Please try again later.'; // Clear fallback message
 
-      return NextResponse.json({ reply });
+      // Ensure reply is a string and not empty
+      const finalReply = typeof reply === 'string' && reply.trim() 
+        ? reply.trim() 
+        : 'AI Assistant is currently unavailable. Please try again later.';
+
+      return NextResponse.json({ reply: finalReply });
     } catch (fetchError: any) {
       clearTimeout(timeoutId);
       
       if (fetchError.name === 'AbortError') {
         console.error('ApiFreeLLM request timeout');
         return NextResponse.json({
-          error: 'Request timeout',
           reply: 'Sorry, the request took too long. Please try again.',
         }, { status: 200 });
       }
@@ -80,9 +86,9 @@ export async function POST(request: NextRequest) {
       throw fetchError; // Re-throw to be caught by outer catch
     }
   } catch (error) {
-    console.error('Error getting AI reply:', error);
+    console.error('AI route error:', error);
     return NextResponse.json(
-      { error: 'Failed to get AI reply', reply: 'Sorry, I encountered an error. Please try again.' },
+      { reply: 'AI Assistant error. Please try again later.' },
       { status: 500 }
     );
   }

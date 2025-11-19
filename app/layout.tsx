@@ -5,11 +5,15 @@ import "./globals.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+  display: "swap", // Ensure fonts are loaded with display swap
+  preload: true, // Explicitly enable preload
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
+  display: "swap", // Ensure fonts are loaded with display swap
+  preload: true, // Explicitly enable preload
 });
 
 export const metadata: Metadata = {
