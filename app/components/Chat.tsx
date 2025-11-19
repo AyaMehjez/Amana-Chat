@@ -252,6 +252,8 @@ export default function Chat() {
 
       // 2. Send message to AI API and get reply
       try {
+        console.log('[Chat] Sending message to AI API:', userMessage);
+        
         const aiResponse = await fetch('/api/ai-reply', {
           method: 'POST',
           headers: {
@@ -260,8 +262,45 @@ export default function Chat() {
           body: JSON.stringify({ message: userMessage }),
         });
 
-        const data = await aiResponse.json();
+        // 📋 Prompt 4: Prevent app from crashing when fetch fails
+        if (!aiResponse.ok) {
+          const errorText = await aiResponse.text().catch(() => 'Unknown error');
+          console.error('[Chat] AI API route error:', {
+            status: aiResponse.status,
+            statusText: aiResponse.statusText,
+            error: errorText,
+          });
+          
+          // Show user-friendly error message
+          if (channelRef.current) {
+            await channelRef.current.publish('message', {
+              text: 'Sorry, I encountered an error. Please try again later.',
+              sender: 'Amana AI Assistant',
+              timestamp: Date.now(),
+            });
+          }
+          return;
+        }
+
+        // 📋 Prompt 4: Safely parse JSON response
+        let data: any = {};
+        try {
+          data = await aiResponse.json();
+          console.log('[Chat] AI API response received:', data);
+        } catch (parseError: any) {
+          console.error('[Chat] Failed to parse AI API response:', parseError);
+          if (channelRef.current) {
+            await channelRef.current.publish('message', {
+              text: 'Sorry, I received an invalid response. Please try again.',
+              sender: 'Amana AI Assistant',
+              timestamp: Date.now(),
+            });
+          }
+          return;
+        }
+
         const reply = data.reply || data.error || 'Sorry, I could not generate a reply.';
+        console.log('[Chat] Extracted reply:', reply.substring(0, 100));
         
         // 3. Publish AI reply to Ably channel so everyone sees it
         // Only publish if we got a valid reply (not an error message)
@@ -269,18 +308,45 @@ export default function Chat() {
             !reply.includes('Sorry, I encountered an error') && 
             !reply.includes('having trouble connecting') &&
             !reply.includes('took too long') &&
+            !reply.includes('currently unavailable') &&
             channelRef.current) {
           await channelRef.current.publish('message', {
             text: reply,
             sender: 'Amana AI Assistant',
             timestamp: Date.now(),
           });
+          console.log('[Chat] AI reply published successfully');
         } else {
-          console.warn('AI reply was empty or error message:', reply);
+          console.warn('[Chat] AI reply was empty or error message:', reply);
+          // Still publish the reply so user knows what happened
+          if (channelRef.current && reply) {
+            await channelRef.current.publish('message', {
+              text: reply,
+              sender: 'Amana AI Assistant',
+              timestamp: Date.now(),
+            });
+          }
         }
-      } catch (aiError) {
-        console.error('Error getting AI reply:', aiError);
-        // Don't show error to user, just log it
+      } catch (aiError: any) {
+        // 📋 Prompt 4: Log error details and show user-friendly message
+        console.error('[Chat] Error getting AI reply:', {
+          name: aiError?.name,
+          message: aiError?.message,
+          stack: aiError?.stack,
+        });
+        
+        // Show user-friendly error message
+        if (channelRef.current) {
+          try {
+            await channelRef.current.publish('message', {
+              text: 'Sorry, I encountered an error. Please try again later.',
+              sender: 'Amana AI Assistant',
+              timestamp: Date.now(),
+            });
+          } catch (publishError) {
+            console.error('[Chat] Failed to publish error message:', publishError);
+          }
+        }
       }
     } catch (error) {
       console.error('Error sending message:', error);
