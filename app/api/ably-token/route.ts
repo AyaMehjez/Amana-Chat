@@ -26,12 +26,25 @@ export async function GET(request: NextRequest) {
       );
     }
 
+    // التحقق من صحة API Key format
+    if (!apiKey.includes('.')) {
+      console.error('Invalid ABLY_API_KEY format');
+      return NextResponse.json(
+        { error: 'Invalid API Key format' },
+        { status: 500 }
+      );
+    }
+
     // الحصول على clientId من query parameter أو استخدام 'anon' كقيمة افتراضية
     const { searchParams } = new URL(request.url);
     const clientId = searchParams.get('clientId') || 'anon';
 
-    // إنشاء عميل Ably باستخدام API Key
-    const ably = new Ably.Rest({ key: apiKey });
+    // إنشاء عميل Ably باستخدام API Key مع timeout
+    const ably = new Ably.Rest({ 
+      key: apiKey,
+      httpRequestTimeout: 10000, // 10 second timeout
+      httpMaxRetryCount: 2, // Reduce retries
+    });
 
     // توليد توكن للعميل مع clientId المطابق
     // 
@@ -56,14 +69,26 @@ export async function GET(request: NextRequest) {
       }),
     };
 
-    const tokenRequest = await ably.auth.createTokenRequest(tokenParams);
+    // Add timeout wrapper for token request
+    const tokenRequestPromise = ably.auth.createTokenRequest(tokenParams);
+    const timeoutPromise = new Promise((_, reject) => 
+      setTimeout(() => reject(new Error('Token request timeout')), 10000)
+    );
+
+    const tokenRequest = await Promise.race([tokenRequestPromise, timeoutPromise]) as any;
 
     // إرجاع التوكن للعميل
     return NextResponse.json(tokenRequest);
-  } catch (error) {
+  } catch (error: any) {
     console.error('Error generating Ably token:', error);
+    
+    // Return more specific error information
+    const errorMessage = error.message || 'Failed to generate token';
     return NextResponse.json(
-      { error: 'Failed to generate token' },
+      { 
+        error: errorMessage,
+        details: error.toString()
+      },
       { status: 500 }
     );
   }

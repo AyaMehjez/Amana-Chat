@@ -59,12 +59,30 @@ export default function Chat() {
       try {
         const clientId = username || 'anon';
         
-        const response = await fetch(`/api/ably-token?clientId=${encodeURIComponent(clientId)}`);
+        // Add timeout to token request
+        const controller = new AbortController();
+        const timeoutId = setTimeout(() => controller.abort(), 15000); // 15 second timeout
+        
+        const response = await fetch(`/api/ably-token?clientId=${encodeURIComponent(clientId)}`, {
+          signal: controller.signal,
+        });
+        
+        clearTimeout(timeoutId);
+        
         if (!response.ok) {
-          throw new Error('Failed to get Ably token');
+          const errorData = await response.json().catch(() => ({}));
+          console.error('Token request failed:', response.status, errorData);
+          throw new Error(`Failed to get Ably token: ${errorData.error || response.status}`);
         }
         
         const tokenRequest = await response.json();
+        
+        // Validate token request structure
+        if (!tokenRequest || !tokenRequest.token) {
+          console.error('Invalid token request structure:', tokenRequest);
+          throw new Error('Invalid token response');
+        }
+        
         const Ably = (await import('ably')).default;
         
         const client = new Ably.Realtime({
@@ -72,6 +90,10 @@ export default function Chat() {
             callback(null, tokenRequest);
           },
           clientId: clientId,
+          // Add connection timeout settings
+          connectionStateTtl: 120000, // 2 minutes
+          realtimeRequestTimeout: 10000, // 10 seconds
+          httpMaxRetryCount: 2, // Reduce retries
         });
 
         ablyClientRef.current = client;
@@ -156,9 +178,19 @@ export default function Chat() {
           console.error('Error loading history:', error);
         }
 
-      } catch (error) {
+      } catch (error: any) {
         console.error('Error initializing Ably:', error);
         setIsLoading(false);
+        setIsConnected(false);
+        
+        // Show user-friendly error message
+        if (error.name === 'AbortError' || error.message?.includes('timeout')) {
+          alert('Connection timeout. Please check your internet connection and try again.');
+        } else if (error.message?.includes('API Key') || error.message?.includes('token')) {
+          alert('Ably connection error. Please check your API Key configuration.');
+        } else {
+          console.error('Ably initialization error details:', error);
+        }
       }
     };
 
