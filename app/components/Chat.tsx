@@ -209,19 +209,23 @@ export default function Chat() {
           body: JSON.stringify({ message: userMessage }),
         });
 
-        if (aiResponse.ok) {
-          const { reply } = await aiResponse.json();
-          
-          // 3. Publish AI reply to Ably channel so everyone sees it
-          if (reply && channelRef.current) {
-            await channelRef.current.publish('message', {
-              text: reply,
-              sender: 'Amana AI Assistant',
-              timestamp: Date.now(),
-            });
-          }
+        const data = await aiResponse.json();
+        const reply = data.reply || data.error || 'Sorry, I could not generate a reply.';
+        
+        // 3. Publish AI reply to Ably channel so everyone sees it
+        // Only publish if we got a valid reply (not an error message)
+        if (reply && 
+            !reply.includes('Sorry, I encountered an error') && 
+            !reply.includes('having trouble connecting') &&
+            !reply.includes('took too long') &&
+            channelRef.current) {
+          await channelRef.current.publish('message', {
+            text: reply,
+            sender: 'Amana AI Assistant',
+            timestamp: Date.now(),
+          });
         } else {
-          console.error('Failed to get AI reply');
+          console.warn('AI reply was empty or error message:', reply);
         }
       } catch (aiError) {
         console.error('Error getting AI reply:', aiError);
